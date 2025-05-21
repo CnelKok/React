@@ -1,0 +1,103 @@
+:root {
+	--viewport-min: 390;
+	--viewport-max: 1920;
+}
+#root {
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+main {
+	flex: 1 0;
+}
+
+body {
+	font-family: "Montserat", sans-serif;
+	height: 100%;
+}
+
+h1 {
+	--font-min: 32;
+	--font-max: 36;
+
+	--maxSize: calc(var(--font-max) / 16);
+	--minSize: calc(var(--font-min) / 16);
+	--maxWidth: calc(var(--viewport-max) / 16);
+	--minWidth: calc(var(--viewport-min) / 16);
+
+	--slope: calc((var(--maxSize) - var(--minSize)) / (var(--maxWidth) - var(--minWidth)));
+	--yAxisIntercept: calc(-1 * var(--minWidth) * var(--slope) + var(--minSize));
+
+	font-size: clamp(
+		calc(var(--minSize) * 1rem),
+		calc(var(--yAxisIntercept) * 1rem + var(--slope) * 100vw),
+		calc(var(--maxSize) * 1rem)
+	);
+	line-height: 1.2;
+}
+
+h2 {
+	--font-min: 25.3984;
+	--font-max: 28.5732;
+
+	--maxSize: calc(var(--font-max) / 16);
+	--minSize: calc(var(--font-min) / 16);
+	--maxWidth: calc(var(--viewport-max) / 16);
+	--minWidth: calc(var(--viewport-min) / 16);
+
+	--slope: calc((var(--maxSize) - var(--minSize)) / (var(--maxWidth) - var(--minWidth)));
+	--yAxisIntercept: calc(-1 * var(--minWidth) * var(--slope) + var(--minSize));
+
+	font-size: clamp(
+		calc(var(--minSize) * 1rem),
+		calc(var(--yAxisIntercept) * 1rem + var(--slope) * 100vw),
+		calc(var(--maxSize) * 1rem)
+	);
+	line-height: 1.3;
+}
+
+h3 {
+	--font-min: 20.1587;
+	--font-max: 22.6786;
+
+	--maxSize: calc(var(--font-max) / 16);
+	--minSize: calc(var(--font-min) / 16);
+	--maxWidth: calc(var(--viewport-max) / 16);
+	--minWidth: calc(var(--viewport-min) / 16);
+
+	--slope: calc((var(--maxSize) - var(--minSize)) / (var(--maxWidth) - var(--minWidth)));
+	--yAxisIntercept: calc(-1 * var(--minWidth) * var(--slope) + var(--minSize));
+
+	font-size: clamp(
+		calc(var(--minSize) * 1rem),
+		calc(var(--yAxisIntercept) * 1rem + var(--slope) * 100vw),
+		calc(var(--maxSize) * 1rem)
+	);
+	line-height: 1.4;
+}
+
+p {
+	--font-min: 16;
+	--font-max: 18;
+
+	--maxSize: calc(var(--font-max) / 16);
+	--minSize: calc(var(--font-min) / 16);
+	--maxWidth: calc(var(--viewport-max) / 16);
+	--minWidth: calc(var(--viewport-min) / 16);
+
+	--slope: calc((var(--maxSize) - var(--minSize)) / (var(--maxWidth) - var(--minWidth)));
+	--yAxisIntercept: calc(-1 * var(--minWidth) * var(--slope) + var(--minSize));
+
+	font-size: clamp(
+		calc(var(--minSize) * 1rem),
+		calc(var(--yAxisIntercept) * 1rem + var(--slope) * 100vw),
+		calc(var(--maxSize) * 1rem)
+	);
+	line-height: 1.5;
+}
+
+small {
+	font-size: calc(14.2866 / 16 * 1rem);
+	line-height: 1.6;
+}
