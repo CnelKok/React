@@ -9,4 +9,9 @@
 	--container-width: calc(1280 / 16 * 1rem);
 	--container-padding-x: calc(12 / 16 * 1rem);
 	--transition-duration: 0.2s;
+
+	--laptop: 1440.98;
+	--tablet: 1023.98;
+	--mobile: 767.98;
+	--mobile-s: 480.98;
 }

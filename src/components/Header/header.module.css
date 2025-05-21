@@ -7,19 +7,133 @@
 	justify-content: space-between;
 	padding-block: calc(32 / 16 * 1rem);
 }
-.header__logo {
-	/* … */
-}
+/* ==================== NAV ==================== */
+
 .header__nav {
-	/* … */
-}
-.header__list {
 	display: flex;
 }
-.header__list-item {
-	padding: calc(12 / 16 * 1rem) calc(20 / 16 * 1rem);
+
+.header__list {
+	display: flex;
+	column-gap: calc(28 / 16 * 1rem);
 }
 .header__list-link {
+	padding: calc(12 / 16 * 1rem) calc(12 / 16 * 1rem);
+
 	color: var(--bg-color);
 	font-weight: 500;
 }
+@media (min-width: calc(767.98 / 16 * 1rem)) {
+	.header__overlay {
+		display: contents;
+	}
+}
+
+@media (max-width: calc(767.98 / 16 * 1rem)) {
+	.header__overlay {
+		z-index: 1;
+		position: fixed;
+		inset: 0;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		background-color: var(--primary-color);
+		opacity: 0;
+		translate: 100%;
+		transition-duration: var(--transition-duration);
+	}
+	.header__overlay--active {
+		opacity: 1;
+		translate: 0;
+	}
+	.header__nav {
+		justify-content: center;
+		overflow-y: auto;
+	}
+
+	.header__list {
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		row-gap: calc(16 / 16 * 1rem);
+	}
+}
+
+/* ==================== NAV UNDERLINE ==================== */
+
+.header__list-item {
+	position: relative;
+}
+
+.header__list-link::after {
+	content: "";
+	position: absolute;
+	width: 100%;
+	display: block;
+	height: calc(2 / 16 * 1rem);
+	border-radius: calc(2 / 16 * 1rem);
+	background-color: var(--bg-color);
+	transform: scaleX(0);
+	transform-origin: bottom right;
+	bottom: 0;
+	left: 0;
+	transition: transform var(--transition-duration);
+}
+
+.header__list-link:hover::after {
+	transform: scaleX(1);
+	transform-origin: bottom left;
+}
+
+.header__list-link--active::after {
+	transform: scaleX(1);
+	transform-origin: bottom right;
+}
+
+/* ==================== ^^^^^^^^^^^^^ ==================== */
+
+/* ==================== ^^^ ==================== */
+
+/* ==================== BURGER BUTTON ==================== */
+
+.header__burger-button {
+	z-index: 2;
+	width: calc(34 / 16 * 1rem);
+	height: calc(34 / 16 * 1rem);
+	padding: calc(8 / 16 * 1rem) calc(4 / 16 * 1rem);
+	border: none;
+	background-color: transparent;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	row-gap: calc(8 / 16 * 1rem);
+	color: var(--bg-color);
+}
+
+.header_burger-button-line {
+	width: 100%;
+	height: calc(2 / 16 * 1rem);
+	background-color: var(--bg-color);
+	color: currentColor;
+	transition-duration: var(--transition-duration);
+	border-radius: calc(2 / 16 * 1rem);
+}
+
+.header__burger-button--active .header_burger-button-line:first-child {
+	rotate: -45deg;
+	translate: 0em 0.3em;
+}
+
+.header__burger-button--active .header_burger-button-line:last-child {
+	rotate: 45deg;
+	translate: 0em -0.3em;
+}
+
+@media (min-width: calc(767.98 / 16 * 1rem)) {
+	.header__burger-button {
+		display: none !important;
+	}
+}
+
+/* ==================== ^^^^^^^^^^^^^ ==================== */

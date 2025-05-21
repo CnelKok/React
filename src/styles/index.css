@@ -1,3 +1,7 @@
+html.lock {
+	overflow: hidden;
+}
+
 #root {
 	min-height: 100%;
 	display: flex;
@@ -98,6 +102,16 @@ h3 {
 small {
 	font-size: calc(14.2866 / 16 * 1rem);
 	line-height: 1.6;
+}
+
+a,
+button,
+label,
+input,
+textarea,
+select,
+svg * {
+	transition-duration: var(--transition-duration);
 }
 
 .container {
