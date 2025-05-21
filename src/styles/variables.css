@@ -1,0 +1,12 @@
+:root {
+	--viewport-min: 390;
+	--viewport-max: 1920;
+
+	--primary-color: #193cb8;
+	--text-color: black;
+	--bg-color: white;
+
+	--container-width: calc(1280 / 16 * 1rem);
+	--container-padding-x: calc(12 / 16 * 1rem);
+	--transition-duration: 0.2s;
+}

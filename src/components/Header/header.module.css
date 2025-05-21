@@ -1,0 +1,25 @@
+.header {
+	background-color: var(--primary-color);
+}
+.header__container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding-block: calc(32 / 16 * 1rem);
+}
+.header__logo {
+	/* … */
+}
+.header__nav {
+	/* … */
+}
+.header__list {
+	display: flex;
+}
+.header__list-item {
+	padding: calc(12 / 16 * 1rem) calc(20 / 16 * 1rem);
+}
+.header__list-link {
+	color: var(--bg-color);
+	font-weight: 500;
+}

@@ -5,6 +5,8 @@
 ::before,
 ::after {
 	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
 
 /**
@@ -178,4 +180,8 @@ svg * {
 		transition-duration: 0.01ms !important;
 		scroll-behavior: auto !important;
 	}
+}
+
+a[class] {
+	text-decoration: none;
 }
