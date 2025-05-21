@@ -12,6 +12,12 @@ const Header = () => {
 		htmlElement.classList.toggle("lock");
 	};
 
+	const handleNavClick = () => {
+		if (isOpen) {
+			handleClick();
+		}
+	};
+
 	return (
 		<header className={styles.header}>
 			<div className={`${styles.header__container} container`}>
@@ -31,22 +37,47 @@ const Header = () => {
 										}`
 									}
 									to="/"
+									onClick={handleNavClick}
 								>
 									Главная
 								</NavLink>
 							</li>
 							<li className={styles["header__list-item"]}>
-								<NavLink className={styles["header__list-link"]} to="/career">
+								<NavLink
+									className={({ isActive }) =>
+										`${styles["header__list-link"]} ${
+											isActive ? styles["header__list-link--active"] : ""
+										}`
+									}
+									to="/career"
+									onClick={handleNavClick}
+								>
 									Карьера
 								</NavLink>
 							</li>
 							<li className={styles["header__list-item"]}>
-								<NavLink className={styles["header__list-link"]} to="/trekmatics">
+								<NavLink
+									className={({ isActive }) =>
+										`${styles["header__list-link"]} ${
+											isActive ? styles["header__list-link--active"] : ""
+										}`
+									}
+									to="/trekmatics"
+									onClick={handleNavClick}
+								>
 									Трекматика
 								</NavLink>
 							</li>
 							<li className={styles["header__list-item"]}>
-								<NavLink className={styles["header__list-link"]} to="/contacts">
+								<NavLink
+									className={({ isActive }) =>
+										`${styles["header__list-link"]} ${
+											isActive ? styles["header__list-link--active"] : ""
+										}`
+									}
+									to="/contacts"
+									onClick={handleNavClick}
+								>
 									Контакты
 								</NavLink>
 							</li>
