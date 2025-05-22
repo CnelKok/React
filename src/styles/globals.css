@@ -33,7 +33,7 @@ body {
 		calc(var(--maxSize) * 1rem)
 	);
 	line-height: 1.5;
-	font-weight: 600;
+	font-weight: 500;
 }
 
 h1 {

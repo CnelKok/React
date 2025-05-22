@@ -3,28 +3,21 @@ import { useState } from "react";
 import logo from "/logo.svg";
 import styles from "./header.module.css";
 
-const NavItem = ({ text, to, handleNavClick }) => {
+const NavItem = ({ item }) => {
 	return (
 		<li className={styles["header__list-item"]}>
 			<NavLink
 				className={({ isActive }) =>
 					`${styles["header__list-link"]} ${isActive ? styles["header__list-link--active"] : ""}`
 				}
-				to={to}
-				onClick={handleNavClick}
+				to={item.path}
+				onClick={item.action}
 			>
-				{text}
+				{item.text}
 			</NavLink>
 		</li>
 	);
 };
-
-const items = [
-	["Главная", "/"],
-	["Карьера", "/career"],
-	["Трекматика", "/trekmatics"],
-	["Контакты", "/contacts"],
-];
 
 const Header = () => {
 	const [isOpen, setOpen] = useState(false);
@@ -40,6 +33,13 @@ const Header = () => {
 		}
 	};
 
+	const items = [
+		{ text: "Главная", path: "/", action: handleNavClick },
+		{ text: "Карьера", path: "/career", action: handleNavClick },
+		{ text: "Трекматика", path: "/trekmatics", action: handleNavClick },
+		{ text: "Контакты", path: "/contacts", action: handleNavClick },
+	];
+
 	return (
 		<header className={styles.header}>
 			<div className={`${styles.header__container} container`}>
@@ -52,7 +52,7 @@ const Header = () => {
 					<nav className={styles.header__nav}>
 						<ul className={styles.header__list}>
 							{items.map((item, idx) => (
-								<NavItem key={idx} text={item[0]} to={item[1]} handleNavClick={handleNavClick} />
+								<NavItem key={idx} item={item} />
 							))}
 						</ul>
 					</nav>
