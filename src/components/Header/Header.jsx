@@ -3,6 +3,29 @@ import { useState } from "react";
 import logo from "/logo.svg";
 import styles from "./header.module.css";
 
+const NavItem = ({ text, to, handleNavClick }) => {
+	return (
+		<li className={styles["header__list-item"]}>
+			<NavLink
+				className={({ isActive }) =>
+					`${styles["header__list-link"]} ${isActive ? styles["header__list-link--active"] : ""}`
+				}
+				to={to}
+				onClick={handleNavClick}
+			>
+				{text}
+			</NavLink>
+		</li>
+	);
+};
+
+const items = [
+	["Главная", "/"],
+	["Карьера", "/career"],
+	["Трекматика", "/trekmatics"],
+	["Контакты", "/contacts"],
+];
+
 const Header = () => {
 	const [isOpen, setOpen] = useState(false);
 	const handleClick = () => {
@@ -28,58 +51,9 @@ const Header = () => {
 				>
 					<nav className={styles.header__nav}>
 						<ul className={styles.header__list}>
-							<li className={styles["header__list-item"]}>
-								<NavLink
-									className={({ isActive }) =>
-										`${styles["header__list-link"]} ${
-											isActive ? styles["header__list-link--active"] : ""
-										}`
-									}
-									to="/"
-									onClick={handleNavClick}
-								>
-									Главная
-								</NavLink>
-							</li>
-							<li className={styles["header__list-item"]}>
-								<NavLink
-									className={({ isActive }) =>
-										`${styles["header__list-link"]} ${
-											isActive ? styles["header__list-link--active"] : ""
-										}`
-									}
-									to="/career"
-									onClick={handleNavClick}
-								>
-									Карьера
-								</NavLink>
-							</li>
-							<li className={styles["header__list-item"]}>
-								<NavLink
-									className={({ isActive }) =>
-										`${styles["header__list-link"]} ${
-											isActive ? styles["header__list-link--active"] : ""
-										}`
-									}
-									to="/trekmatics"
-									onClick={handleNavClick}
-								>
-									Трекматика
-								</NavLink>
-							</li>
-							<li className={styles["header__list-item"]}>
-								<NavLink
-									className={({ isActive }) =>
-										`${styles["header__list-link"]} ${
-											isActive ? styles["header__list-link--active"] : ""
-										}`
-									}
-									to="/contacts"
-									onClick={handleNavClick}
-								>
-									Контакты
-								</NavLink>
-							</li>
+							{items.map((item, idx) => (
+								<NavItem key={idx} text={item[0]} to={item[1]} handleNavClick={handleNavClick} />
+							))}
 						</ul>
 					</nav>
 				</div>
