@@ -1,11 +1,10 @@
 import { Link, NavLink } from "react-router-dom";
+import { useState } from "react";
 import logo from "/logo.svg";
 import styles from "./header.module.css";
-import { useState } from "react";
 
 const Header = () => {
 	const [isOpen, setOpen] = useState(false);
-
 	const handleClick = () => {
 		setOpen(!isOpen);
 		const htmlElement = document.documentElement;
