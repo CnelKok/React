@@ -6,6 +6,7 @@ const Home = React.lazy(() => import("./pages/Home"));
 const Career = React.lazy(() => import("./pages/Career"));
 const Trekmatics = React.lazy(() => import("./pages/Trekmatics"));
 const Contacts = React.lazy(() => import("./pages/Contacts"));
+const Error404 = React.lazy(() => import("./pages/Error404"));
 
 const router = createBrowserRouter([
 	{
@@ -28,6 +29,7 @@ const router = createBrowserRouter([
 				path: "contacts",
 				element: <Contacts />,
 			},
+			{ path: "*", element: <Error404 /> },
 		],
 	},
 ]);
