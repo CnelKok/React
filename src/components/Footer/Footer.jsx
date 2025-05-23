@@ -1,4 +1,3 @@
-import React, { Fragment } from "react";
 import styles from "./footer.module.css";
 import callIcon from "/call.svg";
 import locationIcon from "/location.svg";

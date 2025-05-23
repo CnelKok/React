@@ -1,6 +1,16 @@
 .header {
 	background-color: var(--primary-color);
+	position: fixed;
+	left: 0;
+	right: 0;
+	z-index: 1000;
+	transition-duration: var(--transition-duration);
 }
+
+.header--hide {
+	transform: translateY(-100%);
+}
+
 .header__container {
 	display: flex;
 	align-items: center;

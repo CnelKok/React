@@ -1,5 +1,5 @@
 import { Link, NavLink } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import logo from "/logo.svg";
 import styles from "./header.module.css";
 
@@ -21,6 +21,27 @@ const NavItem = ({ item }) => {
 
 const Header = () => {
 	const [isOpen, setOpen] = useState(false);
+
+	const [show, setShow] = useState(true);
+	const [lastScrollY, setLastScrollY] = useState(0);
+
+	useEffect(() => {
+		const handleScroll = () => {
+			const currentScrollY = window.scrollY;
+
+			if (currentScrollY > lastScrollY && currentScrollY > 100) {
+				setShow(false);
+			} else {
+				setShow(true);
+			}
+
+			setLastScrollY(currentScrollY);
+		};
+
+		window.addEventListener("scroll", handleScroll);
+		return () => window.removeEventListener("scroll", handleScroll);
+	}, [lastScrollY]);
+
 	const handleClick = () => {
 		setOpen(!isOpen);
 		const htmlElement = document.documentElement;
@@ -41,7 +62,7 @@ const Header = () => {
 	];
 
 	return (
-		<header className={styles.header}>
+		<header className={`${styles.header} ${!show ? styles["header--hide"] : ""}`}>
 			<div className={`${styles.header__container} container`}>
 				<Link className={styles.header__logo} to="/">
 					<img src={logo} alt="" />
