@@ -1,5 +1,11 @@
 import { createBrowserRouter } from "react-router-dom";
 import App from "./App";
+import React from "react";
+
+const Home = React.lazy(() => import("./pages/Home"));
+const Career = React.lazy(() => import("./pages/Career"));
+const Trekmatics = React.lazy(() => import("./pages/Trekmatics"));
+const Contacts = React.lazy(() => import("./pages/Contacts"));
 
 const router = createBrowserRouter([
 	{
@@ -8,31 +14,19 @@ const router = createBrowserRouter([
 		children: [
 			{
 				index: true,
-				lazy: async () => {
-					const module = await import("./pages/Home");
-					return { Component: module.default };
-				},
+				element: <Home />,
 			},
 			{
 				path: "career",
-				lazy: async () => {
-					const module = await import("./pages/Career");
-					return { Component: module.default };
-				},
+				element: <Career />,
 			},
 			{
 				path: "trekmatics",
-				lazy: async () => {
-					const module = await import("./pages/Trekmatics");
-					return { Component: module.default };
-				},
+				element: <Trekmatics />,
 			},
 			{
 				path: "contacts",
-				lazy: async () => {
-					const module = await import("./pages/Contacts");
-					return { Component: module.default };
-				},
+				element: <Contacts />,
 			},
 		],
 	},

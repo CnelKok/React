@@ -1,6 +1,7 @@
 .header {
 	background-color: var(--primary-color);
 	position: fixed;
+	top: 0;
 	left: 0;
 	right: 0;
 	z-index: 1000;
@@ -90,9 +91,11 @@
 	transition: transform var(--transition-duration);
 }
 
-.header__list-link:hover::after {
-	transform: scaleX(1);
-	transform-origin: bottom left;
+@media (any-hover: hover) {
+	.header__list-link:hover::after {
+		transform: scaleX(1);
+		transform-origin: bottom left;
+	}
 }
 
 .header__list-link--active::after {
@@ -107,7 +110,7 @@
 /* ==================== BURGER BUTTON ==================== */
 
 .header__burger-button {
-	z-index: 2;
+	z-index: 1001;
 	width: calc(34 / 16 * 1rem);
 	height: calc(34 / 16 * 1rem);
 	padding: calc(8 / 16 * 1rem) calc(4 / 16 * 1rem);

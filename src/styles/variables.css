@@ -5,6 +5,8 @@
 	--primary-color: #193cb8;
 	--text-color: black;
 	--bg-color: white;
+	--gray-color: #ededed;
+	--dark-gray-color: #cbcbcb;
 
 	--container-width: calc(1280 / 16 * 1rem);
 	--container-padding-x: calc(12 / 16 * 1rem);
