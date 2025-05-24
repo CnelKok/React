@@ -1,23 +1,17 @@
-import { useEffect, useState } from "react";
-import styles from "./fallback.module.css";
+import { useEffect } from "react";
 
-const FallBack = () => {
-	const [dots, setDots] = useState(0);
+export default function FallBack() {
+	const [dots, setDots] = useEffect(0);
 
 	useEffect(() => {
-		const maxDots = 3;
 		const interval = setInterval(() => {
-			setDots((prev) => (prev + 1) % (maxDots + 1));
-		}, 200);
-
+			setDots((prev) => (prev + 1) % 4);
+		}, 1000);
 		return () => clearInterval(interval);
 	}, []);
-
 	return (
-		<div className={styles.fallback}>
-			<h1 className="loading">Загрузка{".".repeat(dots)}</h1>
+		<div>
+			<p>Загрузка{".".repeat(dots)}</p>
 		</div>
 	);
-};
-
-export default FallBack;
+}

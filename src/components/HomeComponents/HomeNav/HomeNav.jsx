@@ -1,6 +1,10 @@
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import About from "../About";
 import styles from "./homenav.module.css";
+import FallBack from "../../../pages/FallBack";
+import Services from "../Services";
+import Clients from "../Clients";
+import Sponsors from "../Sponsors";
 
 const NavComponent = ({ item }) => {
 	return <span>{item}</span>;
@@ -22,6 +26,12 @@ const HomeNav = () => {
 		switch (i) {
 			case 0:
 				return <About />;
+			case 1:
+				return <Services />;
+			case 2:
+				return <Clients />;
+			case 3:
+				return <Sponsors />;
 			default:
 				break;
 		}
@@ -44,7 +54,7 @@ const HomeNav = () => {
 						))}
 					</ul>
 				</nav>
-				{getElement(index)}
+				<Suspense fallback={<FallBack />}>{getElement(index)}</Suspense>
 			</div>
 		</>
 	);

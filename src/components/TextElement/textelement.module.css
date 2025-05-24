@@ -1,0 +1,19 @@
+.text__element {
+	display: flex;
+	flex-direction: column;
+	row-gap: calc(24 / 16 * 1rem);
+}
+
+.text__element:not(:last-child) {
+	padding-bottom: calc(12 / 16 * 1rem);
+	border-bottom: calc(1 / 16 * 1rem) solid var(--text-color);
+}
+
+.text__heading {
+	margin-bottom: calc(4 / 16 * 1rem);
+}
+
+.text__element-link {
+	color: var(--primary-color);
+	text-decoration: underline !important;
+}

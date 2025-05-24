@@ -1,19 +1,46 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import styles from "./slider.module.css";
 import data from "./data";
+
+const LazyImage = ({ path }) => {
+	const imgRef = useRef(null);
+	const [loaded, setLoaded] = useState(false);
+	useEffect(() => {
+		if (imgRef.current?.complete) {
+			setLoaded(true);
+		}
+	}, []);
+
+	return (
+		<div
+			className={styles["slider__image-container"]}
+			style={{ backgroundImage: `url(${path.imgSmall})` }}
+		>
+			<img
+				ref={imgRef}
+				src={path.imgBig}
+				alt=""
+				className={styles["slider__image"]}
+				style={{ opacity: loaded ? 1 : 0, transitionDuration: "0.2s" }}
+				onLoad={() => setLoaded(true)}
+				loading="lazy"
+			/>
+		</div>
+	);
+};
 
 const Slider = () => {
 	const [index, setIndex] = useState(0);
 	const [animating, setAnimating] = useState(true);
 	const [direction, setDirection] = useState(null);
 
-	useEffect(() => {
-		const intervalId = setInterval(() => {
-			forward();
-		}, 5000);
+	// useEffect(() => {
+	// 	const intervalId = setInterval(() => {
+	// 		forward();
+	// 	}, 5000);
 
-		return () => clearInterval(intervalId);
-	}, []);
+	// 	return () => clearInterval(intervalId);
+	// }, []);
 
 	const forward = () => {
 		setAnimating(true);
@@ -53,11 +80,12 @@ const Slider = () => {
 					}}
 					onTransitionEnd={handleTransitionEnd}
 				>
-					<img src={data[data.length - 1]} alt="" className={styles["slider__image"]} />
+					<LazyImage path={data[data.length - 1]} />
+
 					{data.map((image, idx) => (
-						<img key={idx} src={image} alt="" className={styles["slider__image"]} />
+						<LazyImage path={image} key={idx} />
 					))}
-					<img src={data[0]} alt="" className={styles["slider__image"]} />
+					<LazyImage path={data[0]} />
 				</div>
 			</div>
 		</>
