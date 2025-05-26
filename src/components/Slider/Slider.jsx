@@ -34,13 +34,13 @@ const Slider = () => {
 	const [animating, setAnimating] = useState(true);
 	const [direction, setDirection] = useState(null);
 
-	// useEffect(() => {
-	// 	const intervalId = setInterval(() => {
-	// 		forward();
-	// 	}, 5000);
+	useEffect(() => {
+		const intervalId = setInterval(() => {
+			forward();
+		}, 5000);
 
-	// 	return () => clearInterval(intervalId);
-	// }, []);
+		return () => clearInterval(intervalId);
+	}, []);
 
 	const forward = () => {
 		setAnimating(true);
