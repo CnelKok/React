@@ -55,7 +55,7 @@ const Header = () => {
 	};
 
 	const items = [
-		{ text: "Главная", path: "/React", action: handleNavClick },
+		{ text: "Главная", path: "/", action: handleNavClick },
 		{ text: "Карьера", path: "career", action: handleNavClick },
 		{ text: "Трекматика", path: "trekmatics", action: handleNavClick },
 		{ text: "Контакты", path: "contacts", action: handleNavClick },
