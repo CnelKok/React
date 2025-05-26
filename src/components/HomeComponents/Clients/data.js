@@ -4,6 +4,8 @@ import chaz from "/logos/chaz.svg";
 import chaz_card from "/cards/chaz_card.png";
 import promtraktor from "/logos/promtraktor.svg";
 import promtraktor_card from "/cards/promtraktor_card.webp";
+import ctz from "/logos/ctz.svg";
+import ctz_card from "/cards/ctz_card.png";
 
 const data = [
 	{
@@ -24,6 +26,11 @@ const data = [
 		hoverText: `Производственная компания «Промтрактор» – это крупнейший производитель бульдозерно-рыхлительной и трубоукладочной техники. Предприятие специализируется на тракторах 9, 11, 15, 20, 25, 35, 40 и 50 классов.
 `,
 		img: promtraktor_card,
+	},
+	{
+		logo: ctz,
+		hoverText: `Производство машин и оборудования для добычи полезных ископаемых и строительства.`,
+		img: ctz_card,
 	},
 ];
 

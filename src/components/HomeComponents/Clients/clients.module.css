@@ -3,5 +3,5 @@
 	flex-wrap: wrap;
 	align-items: stretch;
 	justify-content: space-between;
-	row-gap: calc(24 / 16 * 1rem);
+	row-gap: calc(22 / 16 * 1rem);
 }

@@ -1,6 +1,6 @@
 .card {
 	background-color: var(--gray-color);
-	flex: 0 0 calc(33.33% - (12 / 16 * 1rem));
+	flex: 0 0 calc(100% / 3 - (8 / 16 * 1rem * 2));
 	position: relative;
 	padding: calc(20 / 16 * 1rem);
 	display: flex;
@@ -9,6 +9,8 @@
 	transition: var(--transition-duration) ease;
 	width: calc(33.33% - (12 / 16 * 1rem));
 	cursor: pointer;
+	transform: translateZ(0);
+	min-height: calc(337 / 16 * 1rem);
 }
 
 @media (any-hover: hover) {
@@ -68,6 +70,7 @@
 }
 .card__image img {
 	width: 80%;
+	max-height: calc(155 / 16 * 1rem);
 }
 
 .card__setting {
@@ -89,5 +92,5 @@
 	width: calc(40 / 16 * 1rem);
 	animation: logo-spin infinite 10s linear;
 	scale: 0.5;
-	transition: scale var(--transition-duration) ease calc(var(--transition-duration));
+	transition: scale calc(var(--transition-duration) * 2) ease;
 }
