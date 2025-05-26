@@ -1,9 +1,10 @@
-import { useState } from "react";
+import { useState, lazy } from "react";
 import styles from "./clients.module.css";
 import data from "./data";
-import Card from "../../Card";
-import PopUp from "../../PopUp";
-import CardPopUp from "../../CardPopUp";
+
+const PopUp = lazy(() => import("../../PopUp"));
+const CardPopUp = lazy(() => import("../../CardPopUp"));
+const Card = lazy(() => import("../../Card"));
 
 const Clients = () => {
 	const [active, setActive] = useState(false);
@@ -16,7 +17,7 @@ const Clients = () => {
 	return (
 		<>
 			<PopUp active={active} setActive={setActive}>
-				<CardPopUp {...data[index]} />
+				<CardPopUp key={index} {...data[index]} />
 			</PopUp>
 			<div className={styles.clients}>
 				{data.map((item, i) => (

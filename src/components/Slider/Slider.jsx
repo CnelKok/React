@@ -1,33 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import styles from "./slider.module.css";
 import data from "./data";
-
-const LazyImage = ({ path }) => {
-	const imgRef = useRef(null);
-	const [loaded, setLoaded] = useState(false);
-	useEffect(() => {
-		if (imgRef.current?.complete) {
-			setLoaded(true);
-		}
-	}, []);
-
-	return (
-		<div
-			className={styles["slider__image-container"]}
-			style={{ backgroundImage: `url(${path.imgSmall})` }}
-		>
-			<img
-				ref={imgRef}
-				src={path.imgBig}
-				alt=""
-				className={styles["slider__image"]}
-				style={{ opacity: loaded ? 1 : 0, transitionDuration: "0.2s" }}
-				onLoad={() => setLoaded(true)}
-				loading="lazy"
-			/>
-		</div>
-	);
-};
+import LazyImage from "../LazyImage";
 
 const Slider = () => {
 	const [index, setIndex] = useState(0);

@@ -23,6 +23,9 @@
 	.card__logo {
 		width: 40% !important;
 	}
+	.card {
+		max-height: calc(500 / 16 * 1rem);
+	}
 }
 
 .card__image {

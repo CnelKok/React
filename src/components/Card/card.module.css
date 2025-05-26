@@ -29,7 +29,7 @@
 @media (max-width: calc(767.98 / 16 * 1rem)) {
 	.card {
 		flex: 0 0 100%;
-		min-height: calc(316 / 16 * 1rem);
+		min-height: calc(421 / 16 * 1rem);
 		scale: 1 !important;
 	}
 }
@@ -70,7 +70,7 @@
 }
 .card__image img {
 	width: 80%;
-	max-height: calc(155 / 16 * 1rem);
+	max-height: calc(118 / 16 * 1rem);
 }
 
 .card__setting {

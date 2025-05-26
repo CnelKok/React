@@ -1,10 +1,11 @@
-import { Suspense, useEffect, useState } from "react";
-import About from "../About";
+import { Suspense, useEffect, useState, lazy } from "react";
 import styles from "./homenav.module.css";
 import FallBack from "../../../pages/FallBack";
-import Services from "../Services";
-import Clients from "../Clients";
-import Sponsors from "../Sponsors";
+
+const Clients = lazy(() => import("../Clients"));
+const Services = lazy(() => import("../Services"));
+const Sponsors = lazy(() => import("../Sponsors"));
+const About = lazy(() => import("../About"));
 
 const NavComponent = ({ item }) => {
 	return <span>{item}</span>;

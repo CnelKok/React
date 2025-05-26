@@ -9,7 +9,7 @@ const Card = ({ logo, hoverText, onClick }) => {
 			</div>
 			<p>{hoverText}</p>
 			<div className={styles["card__setting"]}>
-				<img src={setting} alt="" />
+				<img src={setting} alt="" loading="lazy" />
 			</div>
 		</div>
 	);
