@@ -33,13 +33,38 @@ const Slider = () => {
 	const [index, setIndex] = useState(0);
 	const [animating, setAnimating] = useState(true);
 	const [direction, setDirection] = useState(null);
+	const timeoutRef = useRef(null);
+	const INTERVAL_MS = 5000;
+
+	const tick = () => {
+		forward();
+		// переустанавливаем таймаут на следующий цикл
+		timeoutRef.current = setTimeout(tick, INTERVAL_MS);
+	};
 
 	useEffect(() => {
-		const intervalId = setInterval(() => {
-			forward();
-		}, 5000);
+		// Запустить первый таймаут сразу
+		timeoutRef.current = setTimeout(tick, INTERVAL_MS);
 
-		return () => clearInterval(intervalId);
+		// Обработчик видимости страницы
+		const handleVisibilityChange = () => {
+			if (document.hidden) {
+				// если вкладка скрыта — останавливаем таймаут
+				clearTimeout(timeoutRef.current);
+			} else {
+				// если вкладка стала видимой — перезапускаем таймаут
+				clearTimeout(timeoutRef.current);
+				timeoutRef.current = setTimeout(tick, INTERVAL_MS);
+			}
+		};
+
+		document.addEventListener("visibilitychange", handleVisibilityChange);
+
+		return () => {
+			// при анмаунте убираем слушатель и чистим таймаут
+			document.removeEventListener("visibilitychange", handleVisibilityChange);
+			clearTimeout(timeoutRef.current);
+		};
 	}, []);
 
 	const forward = () => {
@@ -75,8 +100,8 @@ const Slider = () => {
 				<div
 					className={styles["slider__container"]}
 					style={{
-						translate: `-${(index + 1) * 100}%`,
-						transition: animating ? "translate 0.4s" : "",
+						transform: `translateX(-${(index + 1) * 100}%)`,
+						transition: animating ? "transform 0.4s" : "",
 					}}
 					onTransitionEnd={handleTransitionEnd}
 				>

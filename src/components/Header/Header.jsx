@@ -65,7 +65,7 @@ const Header = () => {
 	return (
 		<header className={`${styles.header} ${!show ? styles["header--hide"] : ""}`}>
 			<div className={`${styles.header__container} container`}>
-				<Link className={styles.header__logo} to="/React" end>
+				<Link className={styles.header__logo} to="/React">
 					<img src={logo} alt="" />
 				</Link>
 				<div
