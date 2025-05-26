@@ -11,6 +11,7 @@ const NavItem = ({ item }) => {
 					`${styles["header__list-link"]} ${isActive ? styles["header__list-link--active"] : ""}`
 				}
 				to={item.path}
+				end
 				onClick={item.action}
 			>
 				{item.text}
@@ -55,7 +56,7 @@ const Header = () => {
 	};
 
 	const items = [
-		{ text: "Главная", path: "/", action: handleNavClick },
+		{ text: "Главная", path: "/React", action: handleNavClick },
 		{ text: "Карьера", path: "career", action: handleNavClick },
 		{ text: "Трекматика", path: "trekmatics", action: handleNavClick },
 		{ text: "Контакты", path: "contacts", action: handleNavClick },
@@ -64,7 +65,7 @@ const Header = () => {
 	return (
 		<header className={`${styles.header} ${!show ? styles["header--hide"] : ""}`}>
 			<div className={`${styles.header__container} container`}>
-				<Link className={styles.header__logo} to="/">
+				<Link className={styles.header__logo} to="/React" end>
 					<img src={logo} alt="" />
 				</Link>
 				<div
