@@ -10,7 +10,7 @@ const Error404 = React.lazy(() => import("./pages/Error404"));
 
 const router = createBrowserRouter([
 	{
-		path: "/",
+		path: "/React",
 		element: <App />,
 		children: [
 			{
