@@ -39,7 +39,7 @@ const HomeNav = () => {
 	return (
 		<>
 			<div className={`${styles.nav} container`}>
-				<nav className={`${styles["nav__component"]}`}>
+				<nav>
 					<ul className={styles.nav__list}>
 						{navs.map((item, idx) => (
 							<li

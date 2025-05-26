@@ -1,0 +1,31 @@
+.card {
+	background-color: var(--bg-color);
+	margin-inline: calc(20 / 16 * 1rem) !important;
+	padding: calc(20 / 16 * 1rem);
+	display: flex;
+	flex-direction: column;
+	row-gap: calc(20 / 16 * 1rem);
+	width: 100%;
+	max-height: calc(690 / 16 * 1rem);
+	overflow-y: scroll;
+}
+
+.card__logo {
+	width: 10%;
+}
+
+@media (max-width: calc(1023.98 / 16 * 1rem)) {
+	.card__logo {
+		width: 20% !important;
+	}
+}
+@media (max-width: calc(767.98 / 16 * 1rem)) {
+	.card__logo {
+		width: 40% !important;
+	}
+}
+
+.card__image {
+	width: 100%;
+	max-width: calc(500 / 16 * 1rem);
+}

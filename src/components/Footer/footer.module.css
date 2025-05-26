@@ -42,6 +42,12 @@ a.footer__text-item {
 	white-space: nowrap;
 }
 
+@media (any-hover: hover) {
+	a.footer__text-item:hover {
+		text-decoration: underline !important;
+	}
+}
+
 .footer__text-item,
 .footer__copyright-text {
 	color: var(--bg-color);
