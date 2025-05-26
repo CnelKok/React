@@ -1,4 +1,4 @@
-import{j as t}from"./index-C4XeCmQM.js";import{T as s}from"./TextElement-BG7xly4G.js";const a=[[{heading:"Предоставляемые услуги",text:`– аудит компьютерной инфраструктуры;
+import{j as t}from"./index-DzgSTaKs.js";import{T as s}from"./TextElement-Cxwd-9ty.js";const a=[[{heading:"Предоставляемые услуги",text:`– аудит компьютерной инфраструктуры;
 – проектирование ИТ-систем с подбором ПО и необходимого оборудования;
 – поддержание компьютерных сетей в рабочем состоянии;
 – диагностика и профилактика компьютеров, оргтехники;

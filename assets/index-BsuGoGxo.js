@@ -1,0 +1,1 @@
+import{j as r}from"./index-DzgSTaKs.js";const e="_error_1nb4o_1",s={error:e},n=()=>r.jsx("div",{className:`${s.error} margin-top`,children:r.jsxs("div",{className:s.error__inner,children:[r.jsx("h1",{children:"Ошибка 404"}),r.jsx("p",{children:"Страница, на которую вы ссылаетесь, не существует"})]})});export{n as default};
