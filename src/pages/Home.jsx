@@ -1,5 +1,5 @@
-import Slider from "../components/Slider";
 import HomeNav from "../components/HomeComponents/HomeNav";
+import Slider from "../components/HomeComponents/Slider";
 
 const Home = () => {
 	return (

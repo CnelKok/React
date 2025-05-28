@@ -1,17 +1,25 @@
+import TextCareer from "./TextCareer";
 import styles from "./textelement.module.css";
+import TextHome from "./TextHome";
+import TextVacancy from "./TextVacancy";
 
-const TextElement = ({ item }) => {
+const returnContent = (el, type, idx) => {
+	switch (type) {
+		case "career":
+			return <TextCareer el={el} styles={styles} idx={idx} />;
+		case "vacancy":
+			return <TextVacancy el={el} styles={styles} />;
+		default:
+			return <TextHome el={el} styles={styles} />;
+	}
+};
+
+const TextElement = ({ item, type }) => {
 	return (
 		<div className={styles["text__element"]}>
 			{item.map((el, idx) => (
 				<div key={idx} className={styles["text__element-inner"]}>
-					{el.heading && <h3 className={styles["text__heading"]}>{el.heading}</h3>}
-					{el.text.split("\n").map((smth, id) => (smth ? <p key={id}>{smth}</p> : <br key={id} />))}
-					{el.link && (
-						<a href={el.link} target="_blank" className={styles["text__element-link"]}>
-							{el.linkText}
-						</a>
-					)}
+					{returnContent(el, type, idx)}
 				</div>
 			))}
 		</div>

@@ -27,8 +27,3 @@
 		max-height: calc(500 / 16 * 1rem);
 	}
 }
-
-.card__image {
-	width: 100%;
-	max-width: calc(500 / 16 * 1rem);
-}

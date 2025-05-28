@@ -1,9 +1,10 @@
 import { Outlet, ScrollRestoration } from "react-router-dom";
-import { Suspense, useCallback, useState } from "react";
+import { Suspense, useCallback, useState, lazy } from "react";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import LoadingOverlay from "./pages/LoadingOverlay";
-import ContentLoader from "./functions/ContentLoader";
+
+const ContentLoader = lazy(() => import("./functions/ContentLoader"));
 
 function App() {
 	const [ready, setReady] = useState(false);

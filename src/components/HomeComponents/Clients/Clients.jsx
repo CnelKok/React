@@ -1,6 +1,7 @@
-import { useState, lazy } from "react";
+import { useState, lazy, Suspense } from "react";
 import styles from "./clients.module.css";
 import data from "./data";
+import FallBack from "../../../pages/FallBack";
 
 const PopUp = lazy(() => import("../../PopUp"));
 const CardPopUp = lazy(() => import("../../CardPopUp"));
@@ -17,8 +18,13 @@ const Clients = () => {
 	return (
 		<>
 			<PopUp active={active} setActive={setActive}>
-				<CardPopUp key={index} {...data[index]} />
+				{active ? (
+					<Suspense fallback={<FallBack />}>
+						<CardPopUp key={index} {...data[index]} />
+					</Suspense>
+				) : null}
 			</PopUp>
+
 			<div className={styles.clients}>
 				{data.map((item, i) => (
 					<Card onClick={() => openPopUp(i)} key={i} {...item}></Card>

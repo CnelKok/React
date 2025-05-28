@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import React from "react";
 import App from "./App";
+import Vacancy from "./pages/Vacancy";
 
 const Home = React.lazy(() => import("./pages/Home"));
 const Career = React.lazy(() => import("./pages/Career"));
@@ -29,6 +30,7 @@ const router = createBrowserRouter([
 				path: "contacts",
 				element: <Contacts />,
 			},
+			{ path: "vacancy/:vacancy_id", element: <Vacancy /> },
 			{ path: "*", element: <Error404 /> },
 		],
 	},

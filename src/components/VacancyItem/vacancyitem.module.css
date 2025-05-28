@@ -1,0 +1,4 @@
+.vacancy-item {
+	margin-top: calc(40 / 16 * 1rem);
+	margin-bottom: calc(120 / 16 * 1rem);
+}

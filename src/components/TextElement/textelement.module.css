@@ -17,3 +17,16 @@
 	color: var(--primary-color);
 	text-decoration: underline !important;
 }
+
+.text__link {
+	color: var(--text-color);
+}
+@media (any-hover: hover) {
+	.text__link:hover {
+		text-decoration: underline;
+	}
+}
+
+.text__heading--big {
+	margin-bottom: calc(40 / 16 * 1rem);
+}
