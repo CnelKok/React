@@ -10,6 +10,9 @@ import promtraktor_card_small from "/cards/promtraktor_card_small.webp";
 import ctz from "/logos/ctz.svg";
 import ctz_card from "/cards/ctz_card.png";
 import ctz_card_small from "/cards/ctz_card_small.webp";
+import kavaz from "/logos/kavaz.svg";
+import kavaz_card from "/cards/kavaz_card.png";
+import kavaz_card_small from "/cards/kavaz_card_small.webp";
 
 const data = [
 	{
@@ -46,6 +49,17 @@ const data = [
 		images: {
 			imgBig: ctz_card,
 			imgSmall: ctz_card_small,
+		},
+	},
+	{
+		logo: kavaz,
+		hoverText: `ООО «КАВАЗ» (полное название предприятия - общество с ограниченной ответственностью «Канашский вагоностроительный завод») - одно из самых старейших предприятий Чувашской республики.`,
+		text: ` Предприятие входит в структуру Концерна «Тракторные заводы».
+
+Дата основания завода – 16 июня 1936 года. Расположен в городе Канаше Чувашской Республики, являющемся одним из крупных железнодорожных узлов в центре Поволжья. Предприятие начинало свою историю с ремонта грузовых вагонов. В 50-е годы XX века Канашский вагоноремонтный завод в числе первых в системе ремонтных предприятий железнодорожного транспорта страны освоил поточно-конвейерный метод ремонта вагонов. `,
+		images: {
+			imgBig: kavaz_card,
+			imgSmall: kavaz_card_small,
 		},
 	},
 ];

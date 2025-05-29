@@ -1,7 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import styles from "./slider.module.css";
 import data from "./data";
-import LazyImage from "../../LazyImage";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 const Slider = () => {
 	const [index, setIndex] = useState(0);
@@ -12,21 +13,16 @@ const Slider = () => {
 
 	const tick = () => {
 		forward();
-		// переустанавливаем таймаут на следующий цикл
 		timeoutRef.current = setTimeout(tick, INTERVAL_MS);
 	};
 
 	useEffect(() => {
-		// Запустить первый таймаут сразу
 		timeoutRef.current = setTimeout(tick, INTERVAL_MS);
 
-		// Обработчик видимости страницы
 		const handleVisibilityChange = () => {
 			if (document.hidden) {
-				// если вкладка скрыта — останавливаем таймаут
 				clearTimeout(timeoutRef.current);
 			} else {
-				// если вкладка стала видимой — перезапускаем таймаут
 				clearTimeout(timeoutRef.current);
 				timeoutRef.current = setTimeout(tick, INTERVAL_MS);
 			}
@@ -35,7 +31,6 @@ const Slider = () => {
 		document.addEventListener("visibilitychange", handleVisibilityChange);
 
 		return () => {
-			// при анмаунте убираем слушатель и чистим таймаут
 			document.removeEventListener("visibilitychange", handleVisibilityChange);
 			clearTimeout(timeoutRef.current);
 		};
@@ -79,12 +74,31 @@ const Slider = () => {
 					}}
 					onTransitionEnd={handleTransitionEnd}
 				>
-					<LazyImage path={data[data.length - 1]} />
+					<LazyLoadImage
+						src={data[data.length - 1].imgBig}
+						effect="blur"
+						width={"100%"}
+						wrapperClassName={styles["slider__image-container"]}
+						placeholderSrc={data[data.length - 1].imgSmall}
+					/>
 
 					{data.map((image, idx) => (
-						<LazyImage path={image} key={idx} />
+						<LazyLoadImage
+							key={idx}
+							src={image.imgBig}
+							effect="blur"
+							width={"100%"}
+							wrapperClassName={styles["slider__image-container"]}
+							placeholderSrc={image.imgSmall}
+						/>
 					))}
-					<LazyImage path={data[0]} />
+					<LazyLoadImage
+						src={data[0].imgBig}
+						effect="blur"
+						width={"100%"}
+						wrapperClassName={styles["slider__image-container"]}
+						placeholderSrc={data[0].imgSmall}
+					/>
 				</div>
 			</div>
 		</>
