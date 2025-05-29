@@ -1,7 +1,11 @@
+import ContactsItem from "../components/ContactsItem";
+
 const Contacts = () => {
 	return (
 		<>
-			<h1>Contacts</h1>
+			<div className="margin-top">
+				<ContactsItem />
+			</div>
 		</>
 	);
 };

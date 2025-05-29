@@ -4,7 +4,7 @@
 	row-gap: calc(24 / 16 * 1rem);
 }
 
-.text__element:not(:last-child) {
+.text__element:not(:last-of-type) {
 	padding-bottom: calc(12 / 16 * 1rem);
 	border-bottom: calc(1 / 16 * 1rem) solid var(--text-color);
 }

@@ -3,6 +3,7 @@ import styles from "./slider.module.css";
 import data from "./data";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
+import LazyImage from "../../LazyImage";
 
 const Slider = () => {
 	const [index, setIndex] = useState(0);
@@ -74,31 +75,12 @@ const Slider = () => {
 					}}
 					onTransitionEnd={handleTransitionEnd}
 				>
-					<LazyLoadImage
-						src={data[data.length - 1].imgBig}
-						effect="blur"
-						width={"100%"}
-						wrapperClassName={styles["slider__image-container"]}
-						placeholderSrc={data[data.length - 1].imgSmall}
-					/>
+					<LazyImage path={data[data.length - 1]} />
 
 					{data.map((image, idx) => (
-						<LazyLoadImage
-							key={idx}
-							src={image.imgBig}
-							effect="blur"
-							width={"100%"}
-							wrapperClassName={styles["slider__image-container"]}
-							placeholderSrc={image.imgSmall}
-						/>
+						<LazyImage path={image} key={idx} />
 					))}
-					<LazyLoadImage
-						src={data[0].imgBig}
-						effect="blur"
-						width={"100%"}
-						wrapperClassName={styles["slider__image-container"]}
-						placeholderSrc={data[0].imgSmall}
-					/>
+					<LazyImage path={data[0]} />
 				</div>
 			</div>
 		</>

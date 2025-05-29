@@ -13,6 +13,8 @@ import ctz_card_small from "/cards/ctz_card_small.webp";
 import kavaz from "/logos/kavaz.svg";
 import kavaz_card from "/cards/kavaz_card.png";
 import kavaz_card_small from "/cards/kavaz_card_small.webp";
+import itsoft from "/logos/itsoft.svg";
+import soyuz from "/logos/soyuz.svg";
 
 const data = [
 	{
@@ -61,6 +63,13 @@ const data = [
 			imgBig: kavaz_card,
 			imgSmall: kavaz_card_small,
 		},
+	},
+	{
+		logo: itsoft,
+		hoverText: `«ИТ-Софт» - многопрофильная компания, которая специализируется на разработке программных продуктов и ИТ-решений для частного бизнеса и государственных структур. `,
+	},
+	{
+		logo: soyuz,
 	},
 ];
 

@@ -1,7 +1,11 @@
+import TrakmaticsItem from "../components/TrekmaticsItem";
+
 const Trekmatics = () => {
 	return (
 		<>
-			<h1>Trekmatics</h1>
+			<div className="margin-top">
+				<TrakmaticsItem />
+			</div>
 		</>
 	);
 };

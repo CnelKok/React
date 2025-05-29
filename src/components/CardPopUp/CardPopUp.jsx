@@ -9,13 +9,15 @@ const CardPopUp = ({ logo, hoverText, text, images }) => {
 			<p>{hoverText}</p>
 			{text &&
 				text.split("\n").map((line, idx) => (line ? <p key={idx}>{line}</p> : <br key={idx} />))}
-			<LazyLoadImage
-				src={images.imgBig}
-				width={"100%"}
-				height={"auto"}
-				effect="blur"
-				placeholderSrc={images.imgSmall}
-			/>
+			{images && (
+				<LazyLoadImage
+					src={images.imgBig}
+					width={"100%"}
+					height={"auto"}
+					effect="blur"
+					placeholderSrc={images.imgSmall}
+				/>
+			)}
 		</div>
 	);
 };

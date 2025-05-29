@@ -1,0 +1,7 @@
+.contacts {
+	margin-top: calc(40 / 16 * 1rem);
+	display: flex;
+	flex-direction: column;
+	row-gap: calc(40 / 16 * 1rem);
+	margin-bottom: calc(120 / 16 * 1rem);
+}
