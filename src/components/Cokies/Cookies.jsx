@@ -10,7 +10,11 @@ const Cookies = () => {
 	return (
 		<div className={`${styles["cookies"]} ${isActive ? "" : styles["cookies--hide"]}`}>
 			<div className={`${styles["cookies__inner"]} container`}>
-				<p>На этом сайте мы используем куки</p>
+				<p>
+					Этот сайт использует файлы cookie. Собранная при помощи cookie информация не может
+					идентифицировать вас, однако может помочь нам улучшить работу нашего сайта. Продолжая
+					использовать сайт, вы даете согласие на обработку файлов cookie.
+				</p>
 				<div className={styles["button-container"]}>
 					<button
 						className={`${styles["button"]} ${styles["button--secondary"]}`}
