@@ -1,0 +1,2 @@
+const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["./index-B0dteP2m.js","./index-DrrI8D6t.js","./index-BDgYO3Ll.css","./index-BF41403X.css"])))=>i.map(i=>d[i]);
+import{j as r,r as t,_ as a}from"./index-DrrI8D6t.js";const e=t.lazy(()=>a(()=>import("./index-B0dteP2m.js"),__vite__mapDeps([0,1,2,3]),import.meta.url)),o=()=>r.jsx(r.Fragment,{children:r.jsx("div",{className:"margin-top",children:r.jsx(e,{})})});export{o as default};
