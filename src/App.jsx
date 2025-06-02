@@ -5,6 +5,7 @@ import Footer from "./components/Footer";
 import LoadingOverlay from "./pages/LoadingOverlay";
 import ErrorBoundary from "./pages/ErrorBoundary";
 import ErrorConnection from "./pages/ErrorConnection";
+import Cookies from "./components/Cokies";
 
 const ContentLoader = lazy(() => import("./functions/ContentLoader"));
 
@@ -32,6 +33,7 @@ function App() {
 					<ScrollRestoration />
 					<main>{RenderComponent}</main>
 					<Footer />
+					<Cookies />
 				</ContentLoader>
 			</Suspense>
 		</>
