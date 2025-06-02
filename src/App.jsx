@@ -24,6 +24,8 @@ function App() {
 		<Outlet />
 	);
 
+	const RenderCookies = import.meta.env.PROD ? <Cookies /> : null;
+
 	return (
 		<>
 			<LoadingOverlay ready={ready} />
@@ -33,7 +35,7 @@ function App() {
 					<ScrollRestoration />
 					<main>{RenderComponent}</main>
 					<Footer />
-					<Cookies />
+					{RenderCookies}
 				</ContentLoader>
 			</Suspense>
 		</>

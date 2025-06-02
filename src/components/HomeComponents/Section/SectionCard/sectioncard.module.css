@@ -1,0 +1,35 @@
+.section-card {
+	flex: 0 0 calc(50% - (24 / 16 * 1rem));
+	height: calc(300 / 16 * 1rem);
+	position: relative;
+}
+
+@media (max-width: calc(767.98 / 16 * 1rem)) {
+	.section-card {
+		flex: 0 0 100%;
+	}
+}
+
+.section-card__image {
+	width: 100%;
+	height: 100%;
+}
+
+.section-card__image img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.section-card__text {
+	position: absolute;
+	background-color: var(--bg-color);
+	top: calc(12 / 16 * 1rem);
+	left: calc(12 / 16 * 1rem);
+	padding: calc(12 / 16 * 1rem);
+	max-width: calc(100% - (24 / 16 * 1rem));
+}
+
+.section-card__text p {
+	color: var(--text-color);
+}

@@ -1,0 +1,18 @@
+.section {
+	width: 100%;
+}
+
+.section:last-child {
+	margin-bottom: calc(120 / 16 * 1rem);
+}
+
+.section__title {
+	margin-bottom: calc(40 / 16 * 1rem);
+}
+
+.section__card-grid {
+	display: flex;
+	flex-wrap: wrap;
+	row-gap: calc(24 / 16 * 1rem);
+	justify-content: space-between;
+}

@@ -5,7 +5,7 @@ import FallBack from "../../../pages/FallBack";
 
 const PopUp = lazy(() => import("../../PopUp"));
 const CardPopUp = lazy(() => import("../../CardPopUp"));
-const Card = lazy(() => import("../../Card"));
+const Card = lazy(() => import("../Card"));
 
 const Clients = () => {
 	const [active, setActive] = useState(false);
@@ -27,7 +27,7 @@ const Clients = () => {
 
 			<div className={styles.clients}>
 				{data.map((item, i) => (
-					<Card onClick={() => openPopUp(i)} key={i} {...item} ></Card>
+					<Card onClick={() => openPopUp(i)} key={i} {...item}></Card>
 				))}
 			</div>
 		</>
