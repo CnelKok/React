@@ -3,6 +3,8 @@ import { Suspense, useCallback, useState, lazy } from "react";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import LoadingOverlay from "./pages/LoadingOverlay";
+import ErrorBoundary from "./pages/ErrorBoundary";
+import ErrorConnection from "./pages/ErrorConnection";
 
 const ContentLoader = lazy(() => import("./functions/ContentLoader"));
 
@@ -13,6 +15,14 @@ function App() {
 		setReady(true);
 	}, []);
 
+	const RenderComponent = import.meta.env.PROD ? (
+		<ErrorBoundary fallback={<ErrorConnection />}>
+			<Outlet />
+		</ErrorBoundary>
+	) : (
+		<Outlet />
+	);
+
 	return (
 		<>
 			<LoadingOverlay ready={ready} />
@@ -20,9 +30,7 @@ function App() {
 				<ContentLoader onLoaded={handleLoaded}>
 					<Header />
 					<ScrollRestoration />
-					<main>
-						<Outlet />
-					</main>
+					<main>{RenderComponent}</main>
 					<Footer />
 				</ContentLoader>
 			</Suspense>

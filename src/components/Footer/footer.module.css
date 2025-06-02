@@ -25,7 +25,6 @@
 
 .footer__list-icon {
 	width: calc(32 / 16 * 1rem);
-	height: calc(32 / 16 * 1rem);
 }
 
 .footer__list-item {

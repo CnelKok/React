@@ -27,7 +27,7 @@ const Clients = () => {
 
 			<div className={styles.clients}>
 				{data.map((item, i) => (
-					<Card onClick={() => openPopUp(i)} key={i} {...item}></Card>
+					<Card onClick={() => openPopUp(i)} key={i} {...item} ></Card>
 				))}
 			</div>
 		</>
