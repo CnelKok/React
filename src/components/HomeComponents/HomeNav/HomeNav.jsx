@@ -11,7 +11,7 @@ const NavComponent = ({ item }) => {
 	return <span>{item}</span>;
 };
 
-const navs = ["О компании", "Услуги", "Клиенты", "Спонсоры"];
+const navs = ["О компании", "Услуги", "Клиенты", "Партнёры"];
 
 const HomeNav = () => {
 	const [index, setIndex] = useState(() => {
