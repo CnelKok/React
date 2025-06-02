@@ -35,7 +35,7 @@ function App() {
 					<ScrollRestoration />
 					<main>{RenderComponent}</main>
 					<Footer />
-					{RenderCookies}
+					<Cookies />
 				</ContentLoader>
 			</Suspense>
 		</>

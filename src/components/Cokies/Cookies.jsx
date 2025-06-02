@@ -1,11 +1,18 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "./cookies.module.css";
 const Cookies = () => {
-	const [isActive, setIsActive] = useState(true);
+	const [isActive, setIsActive] = useState(() => {
+		const saved = localStorage.getItem("cookieAgreement");
+		return saved !== null ? JSON.parse(saved) : true;
+	});
 
 	const handleClick = () => {
 		setIsActive(false);
 	};
+
+	useEffect(() => {
+		localStorage.setItem("cookieAgreement", JSON.stringify(isActive));
+	}, [isActive]);
 
 	return (
 		<div className={`${styles["cookies"]} ${isActive ? "" : styles["cookies--hide"]}`}>
