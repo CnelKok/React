@@ -3,7 +3,7 @@
 	bottom: 0;
 	left: 0;
 	right: 0;
-	background-color: var(--bg-color);
+	background-color: var(--gray-color);
 	transition-duration: var(--transition-duration);
 }
 .cookies--hide {
@@ -34,7 +34,7 @@
 }
 
 .button--secondary {
-	background-color: var(--bg-color);
+	background-color: transparent;
 	border: calc(2 / 16 * 1rem) solid var(--primary-color);
 	color: var(--primary-color);
 }
