@@ -1,9 +1,12 @@
 import newsData from "./newsData";
 import portfolioData from "./portfolioData";
-import SectionCard from "./SectionCard";
 import styles from "./section.module.css";
 import { Suspense } from "react";
 import FallBack from "../../../pages/FallBack";
+
+import { lazy } from "react";
+
+const SectionCard = lazy(() => import("./SectionCard"));
 
 const Section = ({ type }) => {
 	const chooseData = (key) => {
