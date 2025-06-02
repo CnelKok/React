@@ -2,6 +2,8 @@ import newsData from "./newsData";
 import portfolioData from "./portfolioData";
 import SectionCard from "./SectionCard";
 import styles from "./section.module.css";
+import { Suspense } from "react";
+import FallBack from "../../../pages/FallBack";
 
 const Section = ({ type }) => {
 	const chooseData = (key) => {
@@ -18,14 +20,16 @@ const Section = ({ type }) => {
 	const data = chooseData(type);
 	return (
 		<>
-			<section className={`${styles["section"]} container`}>
+			<div className={`${styles["section"]} container`}>
 				<h1 className={styles["section__title"]}>{data.title}</h1>
 				<div className={styles["section__card-grid"]}>
-					{data.cards.map((item, idx) => (
-						<SectionCard key={idx} item={item} index={idx} />
-					))}
+					<Suspense fallback={<FallBack />}>
+						{data.cards.map((item, idx) => (
+							<SectionCard key={idx} item={item} index={idx} />
+						))}
+					</Suspense>
 				</div>
-			</section>
+			</div>
 		</>
 	);
 };

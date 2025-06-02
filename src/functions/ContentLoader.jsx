@@ -1,9 +1,9 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 
 const ContentLoader = ({ onLoaded, children }) => {
 	useEffect(() => {
 		onLoaded();
-	}, []);
+	}, [onLoaded]);
 
 	return <>{children}</>;
 };

@@ -35,7 +35,7 @@ const Slider = () => {
 			document.removeEventListener("visibilitychange", handleVisibilityChange);
 			clearTimeout(timeoutRef.current);
 		};
-	}, []);
+	});
 
 	const forward = () => {
 		setAnimating(true);
@@ -43,11 +43,11 @@ const Slider = () => {
 		setDirection("forward");
 	};
 
-	const backward = () => {
-		setAnimating(true);
-		setIndex((prev) => prev - 1);
-		setDirection("backward");
-	};
+	// const backward = () => {
+	// 	setAnimating(true);
+	// 	setIndex((prev) => prev - 1);
+	// 	setDirection("backward");
+	// };
 
 	const handleTransitionEnd = () => {
 		switch (direction) {
