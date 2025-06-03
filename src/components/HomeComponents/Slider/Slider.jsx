@@ -1,8 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import styles from "./slider.module.css";
 import data from "./data";
-import { LazyLoadImage } from "react-lazy-load-image-component";
-import "react-lazy-load-image-component/src/effects/blur.css";
 import LazyImage from "../../LazyImage";
 
 const Slider = () => {
