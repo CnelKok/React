@@ -1,2 +1,0 @@
-import{j as r}from"./index-DrrI8D6t.js";import{b as _}from"./Home-DiugZoHE.js";const e="_card_1s86o_1",p="_card__logo_1s86o_23",l={card:e,card__logo:p},n=({logo:d,hoverText:t,text:o,images:s})=>r.jsxs("div",{className:l.card,children:[r.jsx("img",{className:l.card__logo,src:d,alt:""}),r.jsx("p",{children:t}),o&&o.split(`
-`).map((a,c)=>a?r.jsx("p",{children:a},c):r.jsx("br",{},c)),s&&r.jsx(_.LazyLoadImage,{src:s.imgBig,width:"100%",height:"auto",effect:"blur",placeholderSrc:s.imgSmall})]});export{n as default};
