@@ -18,11 +18,9 @@ const Clients = () => {
 	return (
 		<>
 			<PopUp active={active} setActive={setActive}>
-				{active ? (
-					<Suspense fallback={<FallBack />}>
-						<CardPopUp key={index} {...data[index]} />
-					</Suspense>
-				) : null}
+				<Suspense fallback={<FallBack />}>
+					<CardPopUp key={index} {...data[index]} />
+				</Suspense>
 			</PopUp>
 
 			<div className={styles.clients}>
