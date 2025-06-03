@@ -10,5 +10,5 @@ export function useDocumentTitle(title, options = { restoreOnUnmount: false }) {
 				document.title = prev;
 			}
 		};
-	}, [title]);
+	}, [title, options.restoreOnUnmount]);
 }
