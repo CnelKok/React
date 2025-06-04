@@ -1,2 +1,0 @@
-const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["./index-CLhvhCNl.js","./index-CQY5-x0u.js","./index-C607FtbN.css","./index-BF41403X.css"])))=>i.map(i=>d[i]);
-import{u as e,j as r,r as t,_ as a}from"./index-CQY5-x0u.js";const s=t.lazy(()=>a(()=>import("./index-CLhvhCNl.js"),__vite__mapDeps([0,1,2,3]),import.meta.url)),i=()=>(e("Карьера | ОИК"),r.jsx(r.Fragment,{children:r.jsx("div",{className:"margin-top",children:r.jsx(s,{})})}));export{i as default};
