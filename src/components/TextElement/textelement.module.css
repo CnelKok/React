@@ -30,3 +30,12 @@
 .text__heading--big {
 	margin-bottom: calc(40 / 16 * 1rem);
 }
+
+.text__date {
+	color: var(--primary-color);
+}
+
+.text__news-image {
+	margin-inline: auto;
+	max-width: calc(600 / 16 * 1rem);
+}

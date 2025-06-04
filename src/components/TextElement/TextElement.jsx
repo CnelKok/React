@@ -1,6 +1,7 @@
 import TextCareer from "./TextCareer";
 import TextContacts from "./TextContacts";
 import TextHome from "./TextHome";
+import TextNews from "./TextNews";
 import TextTrakmatics from "./TextTrakmatics";
 import TextVacancy from "./TextVacancy";
 import styles from "./textelement.module.css";
@@ -15,6 +16,8 @@ const returnContent = (el, type, idx) => {
 			return <TextTrakmatics el={el} styles={styles} />;
 		case "contacts":
 			return <TextContacts el={el} styles={styles} />;
+		case "news":
+			return <TextNews el={el} styles={styles} />;
 		default:
 			return <TextHome el={el} styles={styles} />;
 	}

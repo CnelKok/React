@@ -8,6 +8,7 @@ const Career = React.lazy(() => import("./pages/Career"));
 const Trekmatics = React.lazy(() => import("./pages/Trekmatics"));
 const Contacts = React.lazy(() => import("./pages/Contacts"));
 const Error404 = React.lazy(() => import("./pages/Error404"));
+const News = React.lazy(() => import("./pages/News"));
 
 const router = createBrowserRouter([
 	{
@@ -31,6 +32,7 @@ const router = createBrowserRouter([
 				element: <Contacts />,
 			},
 			{ path: "vacancy/:vacancy_id", element: <Vacancy /> },
+			{ path: "news/:news_id", element: <News /> },
 			{ path: "*", element: <Error404 /> },
 		],
 	},

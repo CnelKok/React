@@ -1,0 +1,5 @@
+.news {
+	margin-top: calc(160 / 16 * 1rem);
+	margin-bottom: calc(120 / 16 * 1rem);
+	width: 100%;
+}
