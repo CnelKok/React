@@ -1,8 +1,11 @@
+import { lazy, Suspense } from "react";
+import { useParams } from "react-router-dom";
+import { useDocumentTitle } from "../../functions/useDocumentTitle";
 import styles from "./news.module.css";
 import data from "./data";
-import { useParams } from "react-router-dom";
-import TextElement from "../../components/TextElement";
-import { useDocumentTitle } from "../../functions/useDocumentTitle";
+import FallBack from "../FallBack";
+
+const TextElement = lazy(() => import("../../components/TextElement"));
 
 const News = () => {
 	const { news_id } = useParams();
@@ -11,7 +14,9 @@ const News = () => {
 	return (
 		<>
 			<div className={`${styles["news"]} container`}>
-				<TextElement item={items[1]} type={"news"} />
+				<Suspense fallback={<FallBack />}>
+					<TextElement item={items[1]} type={"news"} />
+				</Suspense>
 			</div>
 		</>
 	);

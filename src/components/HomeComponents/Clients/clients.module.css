@@ -5,3 +5,7 @@
 	justify-content: space-between;
 	row-gap: calc(22 / 16 * 1rem);
 }
+
+.fallback-padding {
+	padding: calc(20 / 16 * 1rem);
+}

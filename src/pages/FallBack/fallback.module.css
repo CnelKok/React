@@ -1,5 +1,4 @@
 .fallback {
-	padding: calc(20 / 16 * 1rem);
 	background-color: var(--bg-color);
 	width: 100%;
 	height: calc(400 / 16 * 1rem);

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import styles from "./fallback.module.css";
-export default function FallBack() {
+export default function FallBack({ className }) {
 	const [dots, setDots] = useState(0);
 
 	useEffect(() => {
@@ -10,7 +10,7 @@ export default function FallBack() {
 		return () => clearInterval(interval);
 	}, []);
 	return (
-		<div className={styles.fallback}>
+		<div className={`${styles.fallback} ${className || ""}`}>
 			<h3>Загрузка{".".repeat(dots)}</h3>
 		</div>
 	);
