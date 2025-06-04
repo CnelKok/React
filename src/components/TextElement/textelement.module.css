@@ -43,6 +43,9 @@
 .text__table {
 	width: 100%;
 	border-collapse: collapse;
+	white-space: normal;
+	word-wrap: break-word;
+	word-break: normal;
 }
 
 .text__table tr:not(:last-child) {
@@ -56,4 +59,18 @@
 
 .text__table td:not(:first-child) {
 	text-align: center;
+}
+
+@media (max-width: calc(767.98 / 16 * 1rem)) {
+	.text__table td {
+		padding-inline: calc(8 / 16 * 1rem);
+		max-width: calc(366 / 4 / 16 * 1rem);
+	}
+}
+
+@media (max-width: calc(767.98 / 16 * 1rem)) {
+	.text__table td {
+		padding-inline: calc(8 / 16 * 1rem);
+		width: calc(100% / 4);
+	}
 }
