@@ -1,4 +1,4 @@
-import{j as t}from"./index-C41Irqhg.js";import s from"./index-CtMQIDJ7.js";const a=[[{heading:"Предоставляемые услуги",text:`– аудит компьютерной инфраструктуры;
+import{j as t,T as a}from"./index-Bij-vPx6.js";const r=[[{heading:"Предоставляемые услуги",text:`– аудит компьютерной инфраструктуры;
 – проектирование ИТ-систем с подбором ПО и необходимого оборудования;
 – поддержание компьютерных сетей в рабочем состоянии;
 – диагностика и профилактика компьютеров, оргтехники;
@@ -10,4 +10,4 @@ import{j as t}from"./index-C41Irqhg.js";import s from"./index-CtMQIDJ7.js";const
 – обслуживание и ремонт компьютеров;
 – установка и настройка ПО;
 – администрирование корпоративных сервисов;
-– консультационная поддержка`}]],o=()=>t.jsx(t.Fragment,{children:a.map((e,r)=>t.jsx(s,{item:e},r))});export{o as default};
+– консультационная поддержка`}]],x=()=>t.jsx(t.Fragment,{children:r.map((e,s)=>t.jsx(a,{item:e},s))});export{x as default};
