@@ -9,7 +9,7 @@ const TextNews = ({ el, styles }) => {
 					{el.date}
 				</time>
 			)}
-			{el.heading && <h3 className={styles["text__heading"]}>{el.heading}</h3>}
+			{el.headingBig && <h1 className={styles["text__heading--big"]}>{el.headingBig}</h1>}
 			{el.text &&
 				el.text.split("\n").map((smth, id) => (smth ? <p key={id}>{smth}</p> : <br key={id} />))}
 			{el.imgBig && (

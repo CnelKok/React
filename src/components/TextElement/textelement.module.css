@@ -39,3 +39,21 @@
 	margin-inline: auto;
 	max-width: calc(600 / 16 * 1rem);
 }
+
+.text__table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.text__table tr:not(:last-child) {
+	border-bottom: calc(1 / 16 * 1rem) solid var(--gray-color);
+}
+
+.text__table td {
+	padding-block: calc(12 / 16 * 1rem);
+	vertical-align: top;
+}
+
+.text__table td:not(:first-child) {
+	text-align: center;
+}

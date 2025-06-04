@@ -1,0 +1,8 @@
+.portfolio {
+	width: 100%;
+	margin-top: calc(160 / 16 * 1rem);
+	margin-bottom: calc(120 / 16 * 1rem);
+	display: flex;
+	flex-direction: column;
+	row-gap: calc(40 / 16 * 1rem);
+}
