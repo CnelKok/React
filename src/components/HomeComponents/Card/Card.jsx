@@ -1,9 +1,9 @@
 import styles from "./card.module.css";
 import setting from "/setting.svg";
 
-const Card = ({ logo, hoverText, onClick }) => {
+const Card = ({ logo, hoverText, onClick, style }) => {
 	return (
-		<div className={styles.card} onClick={onClick}>
+		<div className={`${styles.card} ${style || ""}`} onClick={onClick}>
 			<div className={styles["card__image"]}>
 				<img src={logo} alt="" />
 			</div>

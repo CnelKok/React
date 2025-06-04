@@ -1,0 +1,11 @@
+.sponsors {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: stretch;
+	justify-content: space-between;
+	row-gap: calc(22 / 16 * 1rem);
+}
+
+.card-cursor {
+	cursor: auto !important;
+}
