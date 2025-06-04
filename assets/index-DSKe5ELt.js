@@ -1,2 +1,0 @@
-import{j as s,b as _}from"./index-Bij-vPx6.js";const e="_card_1s86o_1",p="_card__logo_1s86o_23",l={card:e,card__logo:p},m=({logo:d,hoverText:t,text:a,images:r})=>s.jsxs("div",{className:l.card,children:[s.jsx("img",{className:l.card__logo,src:d,alt:""}),s.jsx("p",{children:t}),a&&a.split(`
-`).map((o,c)=>o?s.jsx("p",{children:o},c):s.jsx("br",{},c)),r&&s.jsx(_.LazyLoadImage,{src:r.imgBig,width:"100%",height:"auto",effect:"blur",placeholderSrc:r.imgSmall})]});export{m as default};
