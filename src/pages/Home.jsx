@@ -1,9 +1,10 @@
 import { lazy } from "react";
-
-import Slider from "../components/HomeComponents/Slider";
 import { useDocumentTitle } from "../functions/useDocumentTitle";
 
-const Section = lazy(() => import("../components/HomeComponents/Section"));
+import Slider from "../components/HomeComponents/Slider";
+import LazyOnVisible from "../components/LazyOnVisible";
+import FallBack from "./FallBack";
+
 const HomeNav = lazy(() => import("../components/HomeComponents/HomeNav"));
 
 const Home = () => {
@@ -12,8 +13,16 @@ const Home = () => {
 		<>
 			<Slider />
 			<HomeNav />
-			<Section type={"news"} />
-			<Section type={"portfolio"} />
+			<LazyOnVisible
+				loader={() => import("../components/HomeComponents/Section")}
+				fallback={<FallBack className={"container"} />}
+				type={"news"}
+			/>
+			<LazyOnVisible
+				loader={() => import("../components/HomeComponents/Section")}
+				fallback={<FallBack className={"container"} />}
+				type={"portfolio"}
+			/>
 		</>
 	);
 };

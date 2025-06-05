@@ -1,8 +1,6 @@
 import newsData from "./newsData";
 import portfolioData from "./portfolioData";
 import styles from "./section.module.css";
-import { Suspense } from "react";
-import FallBack from "../../../pages/FallBack";
 
 import { lazy } from "react";
 
@@ -26,11 +24,9 @@ const Section = ({ type }) => {
 			<div className={`${styles["section"]} container`}>
 				<h1 className={styles["section__title"]}>{data.title}</h1>
 				<div className={styles["section__card-grid"]}>
-					<Suspense fallback={<FallBack />}>
-						{data.cards.map((item, idx) => (
-							<SectionCard key={idx} item={item} index={idx} />
-						))}
-					</Suspense>
+					{data.cards.map((item, idx) => (
+						<SectionCard key={idx} item={item} index={idx} />
+					))}
 				</div>
 			</div>
 		</>
