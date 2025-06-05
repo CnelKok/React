@@ -5,6 +5,7 @@ const Cookies = () => {
 		const saved = localStorage.getItem("cookieAgreement");
 		return saved !== null ? JSON.parse(saved) : true;
 	});
+	const [hidden, setHidden] = useState(false);
 
 	const handleClick = () => {
 		setIsActive(false);
@@ -12,10 +13,22 @@ const Cookies = () => {
 
 	useEffect(() => {
 		localStorage.setItem("cookieAgreement", JSON.stringify(isActive));
+		getRidOff();
 	}, [isActive]);
 
+	const getRidOff = () => {
+		!isActive && setHidden(true);
+	};
+
+	if (hidden) {
+		return null;
+	}
+
 	return (
-		<div className={`${styles["cookies"]} ${isActive ? "" : styles["cookies--hide"]}`}>
+		<div
+			className={`${styles["cookies"]} ${isActive ? "" : styles["cookies--hide"]}`}
+			onTransitionEnd={() => getRidOff()}
+		>
 			<div className={`${styles["cookies__inner"]} container`}>
 				<p>
 					Этот сайт использует файлы cookie. Собранная при помощи cookie информация не может
