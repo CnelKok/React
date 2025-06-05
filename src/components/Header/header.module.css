@@ -12,6 +12,12 @@
 	transform: translateY(-100%);
 }
 
+@media (max-width: calc(1023.98 / 16 * 1rem)) {
+	.header--hide {
+		transform: none !important;
+	}
+}
+
 .header__container {
 	display: flex;
 	align-items: center;
