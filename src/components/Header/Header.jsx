@@ -65,7 +65,7 @@ const Header = () => {
 	return (
 		<header className={`${styles.header} ${!show ? styles["header--hide"] : ""}`}>
 			<div className={`${styles.header__container} container`}>
-				<Link className={styles.header__logo} to="/React">
+				<Link className={styles.header__logo} to="/React" aria-label="Главная" title="Главная">
 					<img src={logo} alt="" />
 				</Link>
 				<div
@@ -85,6 +85,8 @@ const Header = () => {
 						isOpen ? styles["header__burger-button--active"] : ""
 					}`}
 					onClick={handleClick}
+					aria-label="Бургер-меню"
+					title="Бургер-меню"
 				>
 					<span className={styles["header_burger-button-line"]}></span>
 					<span className={styles["header_burger-button-line"]}></span>
