@@ -1,3 +1,5 @@
+import pdf1 from "/pdf/personal-data-processing-policy.pdf";
+
 const data = [
 	[
 		{
@@ -10,7 +12,7 @@ const data = [
 `,
 		},
 		{
-			pdfLink: `https://iic21.ru/personal-data-processing-policy.pdf`,
+			pdfLink: pdf1,
 			pdfText: `Политика в отношении обработки персональных данных`,
 		},
 	],

@@ -1,3 +1,5 @@
+import PdfLink from "../../PDFLink";
+
 const TextContacts = ({ el, styles }) => {
 	return (
 		<>
@@ -5,9 +7,13 @@ const TextContacts = ({ el, styles }) => {
 			{el.text &&
 				el.text.split("\n").map((smth, id) => (smth ? <p key={id}>{smth}</p> : <br key={id} />))}
 			{el.pdfLink && (
-				<a href={el.pdfLink} target="_blank" className={styles["text__element-link"]}>
+				<PdfLink
+					url={el.pdfLink}
+					title={`${el.pdfText} | ОИК`}
+					className={styles["text__element-link"]}
+				>
 					{el.pdfText}
-				</a>
+				</PdfLink>
 			)}
 		</>
 	);
