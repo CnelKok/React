@@ -1,13 +1,13 @@
 import { Outlet, ScrollRestoration } from "react-router-dom";
 import { Suspense, useCallback, useState, lazy } from "react";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import LoadingOverlay from "./pages/LoadingOverlay";
-import ErrorBoundary from "./pages/ErrorBoundary";
-import ErrorConnection from "./pages/ErrorConnection";
-import Cookies from "./components/Cokies";
 
+const Header = lazy(() => import("./components/Header"));
+const Footer = lazy(() => import("./components/Footer"));
 const ContentLoader = lazy(() => import("./functions/ContentLoader"));
+const LoadingOverlay = lazy(() => import("./pages/LoadingOverlay"));
+const ErrorBoundary = lazy(() => import("./pages/ErrorBoundary"));
+const ErrorConnection = lazy(() => import("./pages/ErrorConnection"));
+const Cookies = lazy(() => import("./components/Cookies"));
 
 function App() {
 	const [ready, setReady] = useState(false);
