@@ -1,0 +1,2 @@
+import{j as c}from"./index-BpgRCGw5.js";import{L as m}from"./LazyLoadImage-CGmzqZok.js";const _="_card_idm3v_1",h="_card__logo_idm3v_23",a={card:_,card__logo:h},e=({logo:s,hoverText:t,text:o,images:r,alt:i})=>c.jsxs("div",{className:a.card,children:[c.jsx("img",{className:a.card__logo,src:s,alt:i}),c.jsx("p",{children:t}),o&&o.split(`
+`).map((d,l)=>d?c.jsx("p",{children:d},l):c.jsx("br",{},l)),r&&c.jsx(m,{highSrc:r.imgBig,lowSrc:r.imgPlaceholder,mediumSrc:r.imgMedium,smallSrc:r.imgSmall,width:r.width,height:r.height,alt:r.alt})]});export{e as default};
