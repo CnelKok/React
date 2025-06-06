@@ -41,12 +41,6 @@ const Slider = () => {
 		setDirection("forward");
 	};
 
-	// const backward = () => {
-	// 	setAnimating(true);
-	// 	setIndex((prev) => prev - 1);
-	// 	setDirection("backward");
-	// };
-
 	const handleTransitionEnd = () => {
 		switch (direction) {
 			case "forward":
