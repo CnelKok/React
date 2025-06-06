@@ -13,7 +13,7 @@ const News = React.lazy(() => import("./pages/News"));
 
 const router = createBrowserRouter([
 	{
-		path: "/React",
+		path: "/",
 		element: <App />,
 		children: [
 			{

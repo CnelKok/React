@@ -56,7 +56,7 @@ const Header = () => {
 	};
 
 	const items = [
-		{ text: "Главная", path: "/React", action: handleNavClick },
+		{ text: "Главная", path: "/", action: handleNavClick },
 		{ text: "Карьера", path: "career", action: handleNavClick },
 		{ text: "Трекматика", path: "trekmatics", action: handleNavClick },
 		{ text: "Контакты", path: "contacts", action: handleNavClick },
@@ -65,7 +65,7 @@ const Header = () => {
 	return (
 		<header className={`${styles.header} ${!show ? styles["header--hide"] : ""}`}>
 			<div className={`${styles.header__container} container`}>
-				<Link className={styles.header__logo} to="/React" aria-label="Главная" title="Главная">
+				<Link className={styles.header__logo} to="/" aria-label="Главная" title="Главная">
 					<img src={logo} alt="" />
 				</Link>
 				<div
