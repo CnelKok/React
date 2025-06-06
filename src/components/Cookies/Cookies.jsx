@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import styles from "./cookies.module.css";
 const Cookies = () => {
 	const [isActive, setIsActive] = useState(() => {
@@ -13,12 +13,13 @@ const Cookies = () => {
 
 	useEffect(() => {
 		localStorage.setItem("cookieAgreement", JSON.stringify(isActive));
-		getRidOff();
 	}, [isActive]);
 
-	const getRidOff = () => {
-		!isActive && setHidden(true);
-	};
+	const getRidOff = useCallback(() => {
+		if (!isActive) {
+			setHidden(true);
+		}
+	}, [isActive]);
 
 	if (hidden) {
 		return null;

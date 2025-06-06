@@ -10,7 +10,7 @@ const ContactsItem = () => {
 	return (
 		<>
 			<div className={`${styles["contacts"]} container`}>
-				<Suspense fallback={<FallBack />}>
+				<Suspense fallback={<FallBack className={styles["contacts__fallback"]} />}>
 					{data.map((item, idx) => (
 						<TextElement item={item} key={idx} type={"contacts"} />
 					))}

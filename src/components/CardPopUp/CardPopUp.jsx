@@ -13,9 +13,10 @@ const CardPopUp = ({ logo, hoverText, text, images }) => {
 				<LazyLoadImage
 					src={images.imgBig}
 					width={"100%"}
-					height={"auto"}
+					height={"fit-content"}
 					effect="blur"
 					placeholderSrc={images.imgSmall}
+					wrapperClassName={styles["card__image-wrapper"]}
 				/>
 			)}
 		</div>

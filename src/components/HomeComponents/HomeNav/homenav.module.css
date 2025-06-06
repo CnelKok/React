@@ -28,3 +28,12 @@
 	background-color: var(--primary-color) !important;
 	color: var(--bg-color);
 }
+
+.nav__fallback {
+	height: calc(1280.334 / 16 * 1rem);
+}
+@media (max-width: calc(767.98 / 16 * 1rem)) {
+	.nav__fallback {
+		height: calc(2858.702 / 16 * 1rem);
+	}
+}

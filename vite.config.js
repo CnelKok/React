@@ -9,5 +9,11 @@ export default defineConfig({
 		rollupOptions: {
 			plugins: [visualizer({ open: true })],
 		},
+		terserOptions: {
+			compress: {
+				drop_console: true,
+				drop_debugger: true,
+			},
+		},
 	},
 });

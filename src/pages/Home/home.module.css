@@ -1,0 +1,9 @@
+.home__section {
+	height: calc(501.83 / 16 * 1rem);
+}
+
+@media (max-width: calc(767.98 / 16 * 1rem)) {
+	.home__section {
+		height: calc(823.533 / 16 * 1rem);
+	}
+}

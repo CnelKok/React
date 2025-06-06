@@ -55,7 +55,9 @@ const HomeNav = () => {
 						))}
 					</ul>
 				</nav>
-				<Suspense fallback={<FallBack />}>{getElement(index)}</Suspense>
+				<Suspense fallback={<FallBack className={styles["nav__fallback"]} />}>
+					{getElement(index)}
+				</Suspense>
 			</div>
 		</>
 	);

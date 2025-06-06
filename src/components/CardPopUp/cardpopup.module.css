@@ -27,16 +27,6 @@
 	}
 }
 
-.card__image-wrapper {
-	position: relative;
-	background-size: cover;
-	background-position: center;
-}
-.card__image-wrapper {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-	opacity: 0;
-	transition: opacity 0.3s ease;
+.card__image-wrapper:global(.lazy-load-image-loaded) {
+	height: fit-content !important;
 }

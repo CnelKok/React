@@ -5,3 +5,12 @@
 	row-gap: calc(40 / 16 * 1rem);
 	margin-bottom: calc(120 / 16 * 1rem);
 }
+.contacts__fallback {
+	height: calc(1233.2 / 16 * 1rem);
+}
+
+@media (max-width: calc(767.98 / 16 * 1rem)) {
+	.contacts__fallback {
+		height: calc(1372.4 / 16 * 1rem);
+	}
+}

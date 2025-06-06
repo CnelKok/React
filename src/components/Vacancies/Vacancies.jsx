@@ -9,7 +9,7 @@ const Vacancies = () => {
 	return (
 		<>
 			<div className={`${styles["vacancies"]} container`}>
-				<Suspense fallback={<FallBack />}>
+				<Suspense fallback={<FallBack className={styles["vacancy__fallback"]} />}>
 					{data.map((item, idx) => (
 						<TextElement key={idx} item={item} type={"career"} />
 					))}

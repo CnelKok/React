@@ -2,3 +2,7 @@
 	margin-top: calc(40 / 16 * 1rem);
 	margin-bottom: calc(120 / 16 * 1rem);
 }
+
+.vacancy__fallback {
+	height: calc(270.2 / 16 * 1rem);
+}
