@@ -74,6 +74,7 @@ const Slider = () => {
 							highSrc={image.imgBig}
 							mediumSrc={image.imgMedium}
 							smallSrc={image.imgSmall}
+							alt={`Слайд ${idx + 1}`}
 							fill
 						/>
 					))}
@@ -82,6 +83,7 @@ const Slider = () => {
 						highSrc={data[0].imgBig}
 						mediumSrc={data[0].imgMedium}
 						smallSrc={data[0].imgSmall}
+						alt={`Слайд 1`}
 						fill
 					/>
 				</div>

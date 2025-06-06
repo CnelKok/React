@@ -11,6 +11,7 @@ const SectionCard = ({ item, index }) => {
 					lowSrc={item.imgPlaceholder}
 					smallSrc={item.imgSmall}
 					mediumSrc={item.imgMedium}
+					alt={item.text}
 					fill
 					className={styles["section-card__image"]}
 				/>

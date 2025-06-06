@@ -1,10 +1,10 @@
 import LazyLoadImage from "../LazyLoadImage";
 import styles from "./cardpopup.module.css";
 
-const CardPopUp = ({ logo, hoverText, text, images }) => {
+const CardPopUp = ({ logo, hoverText, text, images, alt }) => {
 	return (
 		<div className={styles.card}>
-			<img className={styles.card__logo} src={logo} alt="" />
+			<img className={styles.card__logo} src={logo} alt={alt} />
 			<p>{hoverText}</p>
 			{text &&
 				text.split("\n").map((line, idx) => (line ? <p key={idx}>{line}</p> : <br key={idx} />))}
@@ -16,6 +16,7 @@ const CardPopUp = ({ logo, hoverText, text, images }) => {
 					smallSrc={images.imgSmall}
 					width={images.width}
 					height={images.height}
+					alt={images.alt}
 				/>
 			)}
 		</div>

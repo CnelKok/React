@@ -19,6 +19,7 @@ const TextNews = ({ el, styles }) => {
 						height={el.height}
 						mediumSrc={el.imgMedium}
 						smallSrc={el.imgSmall}
+						alt={el.alt}
 					/>
 				</div>
 			)}
