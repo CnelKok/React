@@ -1,0 +1,3 @@
+.lazy-wrapper:last-of-type {
+	margin-bottom: calc(120 / 16 * 1rem);
+}

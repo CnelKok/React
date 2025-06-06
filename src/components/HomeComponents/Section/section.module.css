@@ -2,10 +2,6 @@
 	width: 100%;
 }
 
-.section:last-child {
-	margin-bottom: calc(120 / 16 * 1rem);
-}
-
 .section__title {
 	margin-bottom: calc(40 / 16 * 1rem);
 }

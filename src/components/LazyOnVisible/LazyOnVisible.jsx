@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect, Suspense, lazy } from "react";
+import styles from "./lazyonvisible.module.css";
 
 export function LazyOnVisible({ loader, fallback = null, rootMargin = "0px", ...componentProps }) {
 	const ref = useRef();
@@ -21,7 +22,7 @@ export function LazyOnVisible({ loader, fallback = null, rootMargin = "0px", ...
 	}, [loader, rootMargin]);
 
 	return (
-		<div ref={ref}>
+		<div ref={ref} className={styles["lazy-wrapper"]}>
 			{Component ? (
 				<Suspense fallback={fallback}>
 					<Component {...componentProps} />
