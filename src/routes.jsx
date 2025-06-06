@@ -1,8 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import React from "react";
 import App from "./App";
-import Vacancy from "./pages/Vacancy";
-import Porfolio from "./pages/Portfolio";
 
 const Home = React.lazy(() => import("./pages/Home"));
 const Career = React.lazy(() => import("./pages/Career"));
@@ -10,6 +8,8 @@ const Trekmatics = React.lazy(() => import("./pages/Trekmatics"));
 const Contacts = React.lazy(() => import("./pages/Contacts"));
 const Error404 = React.lazy(() => import("./pages/Error404"));
 const News = React.lazy(() => import("./pages/News"));
+const Vacancy = React.lazy(() => import("./pages/Vacancy"));
+const Portfolio = React.lazy(() => import("./pages/Portfolio"));
 
 const router = createBrowserRouter(
 	[
@@ -35,7 +35,7 @@ const router = createBrowserRouter(
 				},
 				{ path: "vacancy/:vacancy_id", element: <Vacancy /> },
 				{ path: "news/:news_id", element: <News /> },
-				{ path: "portfolio/:portfolio_id", element: <Porfolio /> },
+				{ path: "portfolio/:portfolio_id", element: <Portfolio /> },
 				{ path: "*", element: <Error404 /> },
 			],
 		},
