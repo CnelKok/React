@@ -11,7 +11,6 @@ const NavItem = ({ item }) => {
 					`${styles["header__list-link"]} ${isActive ? styles["header__list-link--active"] : ""}`
 				}
 				to={item.path}
-				end
 				onClick={item.action}
 			>
 				{item.text}
