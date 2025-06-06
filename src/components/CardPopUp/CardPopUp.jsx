@@ -1,6 +1,5 @@
+import LazyLoadImage from "../LazyLoadImage";
 import styles from "./cardpopup.module.css";
-import { LazyLoadImage } from "react-lazy-load-image-component";
-import "react-lazy-load-image-component/src/effects/blur.css";
 
 const CardPopUp = ({ logo, hoverText, text, images }) => {
 	return (
@@ -11,12 +10,12 @@ const CardPopUp = ({ logo, hoverText, text, images }) => {
 				text.split("\n").map((line, idx) => (line ? <p key={idx}>{line}</p> : <br key={idx} />))}
 			{images && (
 				<LazyLoadImage
-					src={images.imgBig}
-					width={"100%"}
-					height={"fit-content"}
-					effect="blur"
-					placeholderSrc={images.imgSmall}
-					wrapperClassName={styles["card__image-wrapper"]}
+					highSrc={images.imgBig}
+					lowSrc={images.imgPlaceholder}
+					mediumSrc={images.imgMedium}
+					smallSrc={images.imgSmall}
+					width={images.width}
+					height={images.height}
 				/>
 			)}
 		</div>

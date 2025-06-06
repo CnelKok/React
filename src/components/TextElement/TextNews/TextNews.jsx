@@ -1,6 +1,4 @@
-import { LazyLoadImage } from "react-lazy-load-image-component";
-import "react-lazy-load-image-component/src/effects/blur.css";
-
+import LazyLoadImage from "../../LazyLoadImage";
 const TextNews = ({ el, styles }) => {
 	return (
 		<>
@@ -14,7 +12,14 @@ const TextNews = ({ el, styles }) => {
 				el.text.split("\n").map((smth, id) => (smth ? <p key={id}>{smth}</p> : <br key={id} />))}
 			{el.imgBig && (
 				<div className={styles["text__news-image"]}>
-					<LazyLoadImage src={el.imgBig} effect="blur" placeholderSrc={el.imgSmall} />
+					<LazyLoadImage
+						highSrc={el.imgBig}
+						lowSrc={el.imgPlaceholder}
+						width={el.width}
+						height={el.height}
+						mediumSrc={el.imgMedium}
+						smallSrc={el.imgSmall}
+					/>
 				</div>
 			)}
 		</>

@@ -26,7 +26,3 @@
 		max-height: calc(500 / 16 * 1rem);
 	}
 }
-
-.card__image-wrapper:global(.lazy-load-image-loaded) {
-	height: fit-content !important;
-}

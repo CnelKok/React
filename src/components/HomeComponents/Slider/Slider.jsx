@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import styles from "./slider.module.css";
 import data from "./data";
-import LazyImage from "../../LazyImage";
+import LazyLoadImage from "../../LazyLoadImage";
 
 const Slider = () => {
 	const [index, setIndex] = useState(0);
@@ -62,17 +62,28 @@ const Slider = () => {
 				<div
 					className={styles["slider__container"]}
 					style={{
-						transform: `translateX(-${(index + 1) * 100}%)`,
+						transform: `translateX(-${index * 100}%)`,
 						transition: animating ? "transform 0.4s" : "",
 					}}
 					onTransitionEnd={handleTransitionEnd}
 				>
-					<LazyImage path={data[data.length - 1]} />
-
 					{data.map((image, idx) => (
-						<LazyImage path={image} key={idx} />
+						<LazyLoadImage
+							key={idx}
+							lowSrc={image.imgPlaceholder}
+							highSrc={image.imgBig}
+							mediumSrc={image.imgMedium}
+							smallSrc={image.imgSmall}
+							fill
+						/>
 					))}
-					<LazyImage path={data[0]} />
+					<LazyLoadImage
+						lowSrc={data[0].imgPlaceholder}
+						highSrc={data[0].imgBig}
+						mediumSrc={data[0].imgMedium}
+						smallSrc={data[0].imgSmall}
+						fill
+					/>
 				</div>
 			</div>
 		</>

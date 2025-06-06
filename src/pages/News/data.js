@@ -1,9 +1,14 @@
 import img1 from "/news/SummitIT-600.png";
-import img1_small from "/news/SummitIT-600_small.webp";
 import img2 from "/news/Благодарность_page-0001-600.png";
-import img2_small from "/news/Благодарность_page-0001-600_small.webp";
 import img3 from "/news/Благодарственное письмо-1.png";
-import img3_small from "/news/Благодарственное письмо-1_small.webp";
+
+import img1_placeholder from "/news/resized/SummitIT-600_placeholder.webp";
+import img2_placeholder from "/news/resized/Благодарность_page-0001-600_placeholder.webp";
+import img3_placeholder from "/news/resized/Благодарственное письмо-1_placeholder.webp";
+
+import img3_medium from "/news/resized/Благодарственное письмо-1_medium.webp";
+
+import img3_small from "/news/resized/Благодарственное письмо-1_small.webp";
 
 const data = [
 	[
@@ -22,7 +27,12 @@ const data = [
 
 «Создание цифровых двойников, накопление и управление данными – залог создания цифровых активов машиностроительных предприятий, которые обеспечат переход к смешанной бизнес-модели реализации изделий и услуг, расширения рынков сбыта и увеличения уровня маржинальности» - комментирует Денис Валентинович `,
 			},
-			{ imgBig: img1, imgSmall: img1_small },
+			{
+				imgBig: img1,
+				imgPlaceholder: img1_placeholder,
+				width: 600,
+				height: 659,
+			},
 		],
 	],
 	[
@@ -33,11 +43,18 @@ const data = [
 				headingBig: "Благодарственное письмо",
 				text: `Благодарственное письмо за благотворительную помощь ДНР и ЛНР от союза женщин Чувашии.`,
 			},
-			{ imgBig: img2, imgSmall: img2_small },
+			{ imgBig: img2, imgPlaceholder: img2_placeholder, width: 600, height: 854 },
 			{
 				text: `Благодарственное письмо за активную общественную деятельность и вклад в развитие предприятия и промышленности Чувашской Республики`,
 			},
-			{ imgBig: img3, imgSmall: img3_small },
+			{
+				imgBig: img3,
+				imgPlaceholder: img3_placeholder,
+				imgSmall: img3_small,
+				imgMedium: img3_medium,
+				width: 1642,
+				height: 2336,
+			},
 		],
 	],
 ];

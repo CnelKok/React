@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Загрузка…</title>
+		<link rel="icon" type="image/svg+xml" href="./oik.svg" />
+		<style>
+			html,
+			body {
+				margin: 0;
+				height: 100%;
+			}
+			embed {
+				width: 100%;
+				height: 100%;
+			}
+		</style>
+	</head>
+	<body>
+		<embed id="pdf" type="application/pdf" src="" />
+		<script>
+			const q = new URLSearchParams(location.search);
+			const pdfUrl = q.get("url");
+			const pageTitle = q.get("title") || document.title;
+			if (pdfUrl) {
+				document.getElementById("pdf").src = pdfUrl;
+			}
+			document.title = pageTitle;
+		</script>
+	</body>
+</html>

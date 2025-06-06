@@ -1,8 +1,8 @@
+import { lazy } from "react";
+
 import newsData from "./newsData";
 import portfolioData from "./portfolioData";
 import styles from "./section.module.css";
-
-import { lazy } from "react";
 
 const SectionCard = lazy(() => import("./SectionCard"));
 

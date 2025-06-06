@@ -1,17 +1,18 @@
-import { LazyLoadImage } from "react-lazy-load-image-component";
 import { Link } from "react-router-dom";
 import styles from "./sectioncard.module.css";
-import "react-lazy-load-image-component/src/effects/blur.css";
+import LazyLoadImage from "../../../LazyLoadImage";
 
 const SectionCard = ({ item, index }) => {
 	return (
 		<>
 			<Link to={item.link + `/${index}`} className={`${styles["section-card"]}`}>
 				<LazyLoadImage
-					src={item.imgBig}
-					effect="blur"
-					placeholderSrc={item.imgSmall}
-					wrapperClassName={styles["section-card__image"]}
+					highSrc={item.imgBig}
+					lowSrc={item.imgPlaceholder}
+					smallSrc={item.imgSmall}
+					mediumSrc={item.imgMedium}
+					fill
+					className={styles["section-card__image"]}
 				/>
 				<div className={styles["section-card__text"]}>
 					{item.text
