@@ -1,0 +1,1 @@
+import{r as t,j as s}from"./index-BsQPNzIJ.js";const n="_fallback_lynwi_1",o={fallback:n};function i({className:a}){const[e,l]=t.useState(0);return t.useEffect(()=>{const r=setInterval(()=>{l(c=>(c+1)%4)},300);return()=>clearInterval(r)},[]),s.jsx("div",{className:`${o.fallback} ${a||""}`,children:s.jsxs("h3",{children:["Загрузка",".".repeat(e)]})})}export{i as F};

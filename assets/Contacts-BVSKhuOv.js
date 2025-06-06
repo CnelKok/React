@@ -1,0 +1,7 @@
+const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["assets/index-8YZupScm.js","assets/index-BsQPNzIJ.js","assets/index-ZDeBpZgY.css","assets/index-BaHWCfFb.js","assets/LazyLoadImage-CpHkJfH9.js","assets/index-yoe_WagJ.css"])))=>i.map(i=>d[i]);
+import{j as t,r as s,_ as c}from"./index-BsQPNzIJ.js";import{u as e}from"./useDocumentTitle-Dq1bzHAu.js";import{F as r}from"./FallBack-By8PC7Zx.js";const l="_contacts_qj3q6_1",_="_contacts__fallback_qj3q6_15",a={contacts:l,contacts__fallback:_},i=[[{headingBig:"Контакты",text:`Общество с ограниченной ответственностью «Отраслевая инфраструктурная компания (сокращенное наименование — ООО «ОИК»)
+
+ИНН 2130227856
+
+основной код ОКВЭД — 62.09 Деятельность, связанная с использованием вычислительной техники и информационных технологий, прочая
+`},{pdfLink:"https://iic21.ru/personal-data-processing-policy.pdf",pdfText:"Политика в отношении обработки персональных данных"}]],p=s.lazy(()=>c(()=>import("./index-8YZupScm.js"),__vite__mapDeps([0,1,2]))),m=s.lazy(()=>c(()=>import("./index-BaHWCfFb.js"),__vite__mapDeps([3,1,2,4,5]))),d=()=>t.jsx(t.Fragment,{children:t.jsx("div",{className:`${a.contacts} container`,children:t.jsxs(s.Suspense,{fallback:t.jsx(r,{className:a.contacts__fallback}),children:[i.map((n,o)=>t.jsx(m,{item:n,type:"contacts"},o)),t.jsx(p,{})]})})}),u=()=>(e("Контакты | ОИК"),t.jsx(t.Fragment,{children:t.jsx("div",{className:"margin-top",children:t.jsx(d,{})})}));export{u as default};
