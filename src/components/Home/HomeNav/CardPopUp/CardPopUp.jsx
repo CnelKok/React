@@ -1,4 +1,4 @@
-import LazyLoadImage from "../LazyLoadImage";
+import LazyLoadImage from "../../../Universal/LazyLoadImage";
 import styles from "./cardpopup.module.css";
 
 const CardPopUp = ({ logo, hoverText, text, images, alt }) => {

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import styles from "./sectioncard.module.css";
-import LazyLoadImage from "../../../LazyLoadImage";
+import LazyLoadImage from "../../../Universal/LazyLoadImage";
 
 const SectionCard = ({ item, index }) => {
 	return (

@@ -1,4 +1,4 @@
-import TextElement from "../../TextElement";
+import TextElement from "../../Universal/TextElement";
 import data from "./data";
 
 const Services = () => {

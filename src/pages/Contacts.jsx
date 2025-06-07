@@ -1,4 +1,4 @@
-import ContactsItem from "../components/ContactsItem";
+import ContactsItem from "../components/Contacts/ContactsItem";
 import { useDocumentTitle } from "../functions/useDocumentTitle";
 
 const Contacts = () => {

@@ -1,5 +1,5 @@
+import TextElement from "../../../Universal/TextElement";
 import data from "./data";
-import TextElement from "../../TextElement";
 
 const About = () => {
 	return (

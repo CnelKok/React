@@ -2,11 +2,11 @@ import { useState, lazy, Suspense } from "react";
 import styles from "./clients.module.css";
 import data from "./data";
 import FallBack from "../../../pages/FallBack";
-import PopUp from "../../PopUp";
+import PopUp from "../../Universal/PopUp";
 import { ErrorBoundary } from "react-error-boundary";
-import ErrorConnection from "../../../pages/ErrorConnection";
+import ErrorConnection from "../../Universal/ErrorConnection";
 
-const CardPopUp = lazy(() => import("../../CardPopUp"));
+const CardPopUp = lazy(() => import("../CardPopUp"));
 const Card = lazy(() => import("../Card"));
 
 const Clients = () => {

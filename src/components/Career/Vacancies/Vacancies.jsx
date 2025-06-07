@@ -1,9 +1,9 @@
 import { Suspense, lazy } from "react";
 import styles from "./vacancies.module.css";
 import data from "./data";
-import FallBack from "../../pages/FallBack";
+import FallBack from "../../Universal/FallBack";
 
-const TextElement = lazy(() => import("../TextElement"));
+const TextElement = lazy(() => import("../../Universal/TextElement"));
 
 const Vacancies = () => {
 	return (

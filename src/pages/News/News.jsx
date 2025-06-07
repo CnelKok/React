@@ -3,9 +3,9 @@ import { useParams } from "react-router-dom";
 import { useDocumentTitle } from "../../functions/useDocumentTitle";
 import styles from "./news.module.css";
 import data from "./data";
-import FallBack from "../FallBack";
+import FallBack from "../../components/Universal/FallBack";
 
-const TextElement = lazy(() => import("../../components/TextElement"));
+const TextElement = lazy(() => import("../../components/Universal/TextElement"));
 
 const News = () => {
 	const { news_id } = useParams();

@@ -1,10 +1,10 @@
 import { lazy, Suspense } from "react";
 import styles from "./contactsitem.module.css";
-import FallBack from "../../pages/FallBack";
 import data from "./data";
+import FallBack from "../../Universal/FallBack";
 
 const Map = lazy(() => import("../Map"));
-const TextElement = lazy(() => import("../TextElement"));
+const TextElement = lazy(() => import("../../Universal/TextElement"));
 
 const ContactsItem = () => {
 	return (

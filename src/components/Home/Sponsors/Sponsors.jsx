@@ -1,6 +1,6 @@
 import styles from "./sponsors.module.css";
 import data from "./data";
-import Card from "../Card";
+import Card from "../HomeNav/Card";
 
 const Sponsors = () => {
 	return (

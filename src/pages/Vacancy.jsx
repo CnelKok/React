@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import VacancyItem from "../components/VacancyItem";
+import VacancyItem from "../components/Career/VacancyItem";
 
 const Vacancy = () => {
 	const { vacancy_id } = useParams();

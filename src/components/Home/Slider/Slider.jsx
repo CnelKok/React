@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import styles from "./slider.module.css";
 import data from "./data";
-import LazyLoadImage from "../../LazyLoadImage";
+import LazyLoadImage from "../../Universal/LazyLoadImage";
 
 const Slider = () => {
 	const [index, setIndex] = useState(0);

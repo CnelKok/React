@@ -1,7 +1,7 @@
 import { lazy } from "react";
 import { useDocumentTitle } from "../functions/useDocumentTitle";
 
-const Vacancies = lazy(() => import("../components/Vacancies"));
+const Vacancies = lazy(() => import("../components/Career/Vacancies"));
 
 const Career = () => {
 	useDocumentTitle("Карьера | ОИК");

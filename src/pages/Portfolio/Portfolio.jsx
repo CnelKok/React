@@ -3,9 +3,9 @@ import { useParams } from "react-router-dom";
 import { useDocumentTitle } from "../../functions/useDocumentTitle";
 import data from "./data";
 import styles from "./portfolio.module.css";
-import FallBack from "../FallBack";
+import FallBack from "../../components/Universal/FallBack";
 
-const TextElement = lazy(() => import("../../components/TextElement"));
+const TextElement = lazy(() => import("../../components/Universal/TextElement"));
 
 const Porfolio = () => {
 	const { portfolio_id } = useParams();

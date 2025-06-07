@@ -1,13 +1,13 @@
 import { Suspense, useEffect, useState, lazy } from "react";
 import styles from "./homenav.module.css";
-import FallBack from "../../../pages/FallBack";
 import { ErrorBoundary } from "react-error-boundary";
-import ErrorConnection from "../../../pages/ErrorConnection";
+import ErrorConnection from "../../Universal/ErrorConnection";
+import FallBack from "../../Universal/FallBack";
 
-const Clients = lazy(() => import("../Clients"));
+const Clients = lazy(() => import("./Clients"));
 const Services = lazy(() => import("../Services"));
 const Sponsors = lazy(() => import("../Sponsors"));
-const About = lazy(() => import("../About"));
+const About = lazy(() => import("./About"));
 
 const navs = ["О компании", "Услуги", "Клиенты", "Партнёры"];
 

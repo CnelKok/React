@@ -1,9 +1,9 @@
 import { lazy, Suspense } from "react";
-import FallBack from "../../pages/FallBack";
 import data from "./data";
 import styles from "./trakmaticsitem.module.css";
+import FallBack from "../Universal/FallBack";
 
-const TextElement = lazy(() => import("../TextElement"));
+const TextElement = lazy(() => import("../Universal/TextElement"));
 
 const TrakmaticsItem = () => {
 	return (
