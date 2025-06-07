@@ -5,8 +5,6 @@ const Header = lazy(() => import("./components/Header"));
 const Footer = lazy(() => import("./components/Footer"));
 const ContentLoader = lazy(() => import("./functions/ContentLoader"));
 const LoadingOverlay = lazy(() => import("./pages/LoadingOverlay"));
-const ErrorBoundary = lazy(() => import("./pages/ErrorBoundary"));
-const ErrorConnection = lazy(() => import("./pages/ErrorConnection"));
 const Cookies = lazy(() => import("./components/Cookies"));
 
 function App() {
@@ -15,14 +13,6 @@ function App() {
 	const handleLoaded = useCallback(() => {
 		setReady(true);
 	}, []);
-
-	const RenderComponent = import.meta.env.PROD ? (
-		<ErrorBoundary fallback={<ErrorConnection />}>
-			<Outlet />
-		</ErrorBoundary>
-	) : (
-		<Outlet />
-	);
 
 	const RenderCookies = import.meta.env.PROD ? <Cookies /> : null;
 
@@ -33,7 +23,9 @@ function App() {
 				<ContentLoader onLoaded={handleLoaded}>
 					<Header />
 					<ScrollRestoration />
-					<main>{RenderComponent}</main>
+					<main>
+						<Outlet />
+					</main>
 					<Footer />
 					{RenderCookies}
 				</ContentLoader>

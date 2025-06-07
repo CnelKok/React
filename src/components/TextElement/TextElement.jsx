@@ -1,11 +1,13 @@
-import TextCareer from "./TextCareer";
-import TextContacts from "./TextContacts";
-import TextHome from "./TextHome";
-import TextNews from "./TextNews";
-import TextPortfolio from "./TextPortfolio";
-import TextTrakmatics from "./TextTrakmatics";
-import TextVacancy from "./TextVacancy";
+import { lazy } from "react";
 import styles from "./textelement.module.css";
+
+const TextCareer = lazy(() => import("./TextCareer"));
+const TextContacts = lazy(() => import("./TextContacts"));
+const TextHome = lazy(() => import("./TextHome"));
+const TextNews = lazy(() => import("./TextNews"));
+const TextPortfolio = lazy(() => import("./TextPortfolio"));
+const TextTrakmatics = lazy(() => import("./TextTrakmatics"));
+const TextVacancy = lazy(() => import("./TextVacancy"));
 
 const returnContent = (el, type, idx) => {
 	switch (type) {

@@ -15,3 +15,10 @@
 		height: calc(500 / 16 * 1rem);
 	}
 }
+
+.clients__error {
+	width: 100%;
+	background-color: var(--bg-color);
+	max-width: calc(100% - (12 / 16 * 1rem));
+	padding: calc(12 / 16 * 1rem);
+}

@@ -65,7 +65,7 @@ const Header = () => {
 		<header className={`${styles.header} ${!show ? styles["header--hide"] : ""}`}>
 			<div className={`${styles.header__container} container`}>
 				<Link className={styles.header__logo} to="/" aria-label="Главная" title="Главная">
-					<img src={logo} alt="Логотип ОИК" />
+					<img src={logo} alt="Логотип ОИК" width={227} height={60} />
 				</Link>
 				<div
 					className={`${styles.header__overlay} ${isOpen ? styles["header__overlay--active"] : ""}`}

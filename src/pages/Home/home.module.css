@@ -7,3 +7,8 @@
 		height: calc(823.533 / 16 * 1rem);
 	}
 }
+
+.home__error {
+	width: 100%;
+	margin-bottom: calc(120 / 16 * 1rem);
+}

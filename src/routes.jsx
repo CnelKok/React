@@ -1,42 +1,56 @@
 import { createBrowserRouter } from "react-router-dom";
-import React from "react";
 import App from "./App";
-
-const Home = React.lazy(() => import("./pages/Home"));
-const Career = React.lazy(() => import("./pages/Career"));
-const Trekmatics = React.lazy(() => import("./pages/Trekmatics"));
-const Contacts = React.lazy(() => import("./pages/Contacts"));
-const Error404 = React.lazy(() => import("./pages/Error404"));
-const News = React.lazy(() => import("./pages/News"));
-const Vacancy = React.lazy(() => import("./pages/Vacancy"));
-const Portfolio = React.lazy(() => import("./pages/Portfolio"));
+import FallBack from "./pages/FallBack";
+import ErrorConnectionPage from "./pages/ErrorConnectionPage";
 
 const router = createBrowserRouter(
 	[
 		{
 			path: "/",
 			element: <App />,
+			errorElement: <ErrorConnectionPage />,
+
 			children: [
 				{
 					index: true,
-					element: <Home />,
+					lazy: () => import("./pages/Home").then((mod) => ({ Component: mod.default })),
+					hydrateFallbackElement: <FallBack />,
 				},
 				{
 					path: "career",
-					element: <Career />,
+					lazy: () => import("./pages/Career").then((mod) => ({ Component: mod.default })),
+					hydrateFallbackElement: <FallBack />,
 				},
 				{
 					path: "trekmatics",
-					element: <Trekmatics />,
+					lazy: () => import("./pages/Trekmatics").then((mod) => ({ Component: mod.default })),
+					hydrateFallbackElement: <FallBack />,
 				},
 				{
 					path: "contacts",
-					element: <Contacts />,
+					lazy: () => import("./pages/Contacts").then((mod) => ({ Component: mod.default })),
+					hydrateFallbackElement: <FallBack />,
 				},
-				{ path: "vacancy/:vacancy_id", element: <Vacancy /> },
-				{ path: "news/:news_id", element: <News /> },
-				{ path: "portfolio/:portfolio_id", element: <Portfolio /> },
-				{ path: "*", element: <Error404 /> },
+				{
+					path: "vacancy/:vacancy_id",
+					lazy: () => import("./pages/Vacancy").then((mod) => ({ Component: mod.default })),
+					hydrateFallbackElement: <FallBack />,
+				},
+				{
+					path: "news/:news_id",
+					lazy: () => import("./pages/News").then((mod) => ({ Component: mod.default })),
+					hydrateFallbackElement: <FallBack />,
+				},
+				{
+					path: "portfolio/:portfolio_id",
+					lazy: () => import("./pages/Portfolio").then((mod) => ({ Component: mod.default })),
+					hydrateFallbackElement: <FallBack />,
+				},
+				{
+					path: "*",
+					lazy: () => import("./pages/Error404").then((mod) => ({ Component: mod.default })),
+					hydrateFallbackElement: <FallBack />,
+				},
 			],
 		},
 	],

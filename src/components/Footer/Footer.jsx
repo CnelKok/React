@@ -55,7 +55,7 @@ const FooterItem = ({ type, icon, text }) => {
 	const Renderer = renderers[type] || ((t) => <span>{t}</span>);
 	return (
 		<li className={styles["footer__list-item"]}>
-			<img className={styles["footer__list-icon"]} src={icon} alt="" />
+			<img className={styles["footer__list-icon"]} src={icon} alt="" width={31} height={30} />
 			{Renderer(text)}
 		</li>
 	);

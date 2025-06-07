@@ -2,8 +2,10 @@ import { useState, lazy, Suspense } from "react";
 import styles from "./clients.module.css";
 import data from "./data";
 import FallBack from "../../../pages/FallBack";
+import PopUp from "../../PopUp";
+import { ErrorBoundary } from "react-error-boundary";
+import ErrorConnection from "../../../pages/ErrorConnection";
 
-const PopUp = lazy(() => import("../../PopUp"));
 const CardPopUp = lazy(() => import("../../CardPopUp"));
 const Card = lazy(() => import("../Card"));
 
@@ -18,9 +20,11 @@ const Clients = () => {
 	return (
 		<>
 			<PopUp active={active} setActive={setActive}>
-				<Suspense fallback={<FallBack className={styles["clients__fallback"]} />}>
-					<CardPopUp key={index} {...data[index]} />
-				</Suspense>
+				<ErrorBoundary fallback={<ErrorConnection className={styles["clients__error"]} />}>
+					<Suspense fallback={<FallBack className={styles["clients__fallback"]} />}>
+						<CardPopUp key={index} {...data[index]} />
+					</Suspense>
+				</ErrorBoundary>
 			</PopUp>
 
 			<div className={styles.clients}>
