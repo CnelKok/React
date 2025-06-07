@@ -1,1 +1,0 @@
-import{r}from"./index-BpgRCGw5.js";function u(t,e={restoreOnUnmount:!1}){r.useEffect(()=>{const n=document.title;return document.title=t,()=>{e.restoreOnUnmount&&(document.title=n)}},[t,e.restoreOnUnmount])}export{u};
