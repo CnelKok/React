@@ -1,1 +1,0 @@
-import{r as o,F as r}from"./index-BY3gjpeT.js";const c=Object.freeze(Object.defineProperty({__proto__:null,default:r},Symbol.toStringTag,{value:"Module"}));function l(e,t={restoreOnUnmount:!1}){o.useEffect(()=>{const n=document.title;return document.title=e,()=>{t.restoreOnUnmount&&(document.title=n)}},[e,t.restoreOnUnmount])}export{c as i,l as u};

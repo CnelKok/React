@@ -1,0 +1,1 @@
+import{j as r}from"./index-CerocmZO.js";const s="_error_1nb4o_1",e={error:s},n=()=>r.jsx("div",{className:`${e.error} margin-top container`,children:r.jsxs("div",{className:e.error__inner,children:[r.jsx("h1",{children:"Ошибка 404"}),r.jsx("p",{children:"Страница, на которую вы ссылаетесь, не существует"})]})});export{n as default};
