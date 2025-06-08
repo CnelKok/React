@@ -1,1 +1,0 @@
-import{j as p}from"./index-CerocmZO.js";const a=({url:n,title:e,children:r,className:o=""})=>{const t=`/React/pdf.html?url=${encodeURIComponent(n)}&title=${encodeURIComponent(e)}`;return p.jsx("a",{href:t,target:"_blank",rel:"noopener noreferrer",className:o,children:r||e})};export{a as P};

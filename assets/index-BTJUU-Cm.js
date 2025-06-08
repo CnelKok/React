@@ -1,0 +1,1 @@
+import{j as e,L as t}from"./index-BAnmHbMa.js";const s=({el:a,styles:i,idx:n})=>e.jsxs(e.Fragment,{children:[a.headingBig&&e.jsx("h1",{className:i["text__heading--big"],children:a.headingBig}),a.heading&&e.jsx("h3",{className:i.text__heading,children:a.heading}),e.jsx(t,{className:i.text__link,to:`/vacancy/${n}`,children:a.text})]});export{s as default};

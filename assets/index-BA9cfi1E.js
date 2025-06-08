@@ -1,2 +1,0 @@
-import{j as e}from"./index-CerocmZO.js";import{P as s}from"./PdfLink-DdfuBpV3.js";const d=({el:t,styles:n})=>e.jsxs(e.Fragment,{children:[t.heading&&e.jsx("h3",{className:n.text__heading,children:t.heading}),t.text.split(`
-`).map((i,r)=>i?e.jsx("p",{children:i},r):e.jsx("br",{},r)),t.pdfLink&&e.jsx(s,{url:t.pdfLink,title:`${t.pdfText} | ОИК`,className:n["text__element-link"],children:t.pdfText})]});export{d as default};

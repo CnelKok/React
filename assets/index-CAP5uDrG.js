@@ -1,0 +1,2 @@
+import{j as i}from"./index-BAnmHbMa.js";import{P as s}from"./PdfLink-CXHMtqdJ.js";const d=({el:t,styles:n})=>i.jsxs(i.Fragment,{children:[t.headingBig&&i.jsx("h1",{className:n["text__heading--big"],children:t.headingBig}),t.text&&t.text.split(`
+`).map((e,r)=>e?i.jsx("p",{children:e},r):i.jsx("br",{},r)),t.pdfLink&&i.jsx(s,{url:t.pdfLink,title:`${t.pdfText} | ОИК`,className:n["text__element-link"],children:t.pdfText})]});export{d as default};
